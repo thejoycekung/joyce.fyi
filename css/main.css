@@ -20,7 +20,7 @@ a {
 
 #title {
   margin-top: 200px;
-  padding: 20px;
+  padding: 15px;
   background-color: #fff;
   box-shadow: 8px 8px 10px #481d2b; 
 }
@@ -29,4 +29,12 @@ a {
   margin-top: 20px;
   padding: 20px;
   background-color: #fff;
+  box-shadow: 8px 8px 10px #481d2b; 
+}
+
+#link {
+  margin-top: 20px;
+  padding: 5px;
+  background-color: #fff;
+  box-shadow: 8px 8px 10px #481d2b;
 }
