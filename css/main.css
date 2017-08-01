@@ -33,8 +33,14 @@ a {
 }
 
 #link {
+  margin-left: 10px;
   margin-top: 20px;
-  padding: 5px;
+  padding: 10px;
   background-color: #fff;
   box-shadow: 8px 8px 10px #481d2b;
+  text-align: center;
+}
+
+#link:hover {
+  box-shadow: 8px 8px 15px #481d2b;
 }
