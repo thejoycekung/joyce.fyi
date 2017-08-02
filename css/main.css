@@ -1,7 +1,3 @@
-body {
-  background-color: rgba(78, 31, 45, 0.5);
-}
-
 h1 {
   font-family: 'Merriweather', serif;
 }
@@ -24,5 +20,4 @@ a {
 
 #info {
   margin-top: 20px;
-  padding: 20px;
 }
