@@ -1,23 +1,25 @@
+body {
+  margin: 100px auto;
+  max-width: 800px;
+}
+
 h1 {
   font-family: 'Merriweather', serif;
+}
+
+h1, h2 {
+  line-height: 1;
 }
 
 h2, p {
   font-family: 'Lato', sans-serif;
 }
 
-h2 {
-  line-height: 100%;
+p {
+  font-size: 16px;
+  line-height: 1.4;
 }
 
 a {
   color: #F06292;
-}
-
-#title {
-  margin-top: 100px;
-}
-
-#info {
-  margin-top: 20px;
 }
