@@ -8,11 +8,10 @@ h1 {
   font-family: 'Merriweather', serif;
   font-size: 36px;
   font-weight: 400;
-  letter-spacing: -3px;
 }
 
 h1, h2 {
-  line-height: 0.9;
+  line-height: 0.8;
 }
 
 p {
