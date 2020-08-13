@@ -1,4 +1,4 @@
-baseURL = "http://thejoycekung.github.io"
+baseURL = "https://thejoycekung.github.io"
 disablePathToLower = true
 languageCode = "en-us"
 title = "Joyce Kung"
