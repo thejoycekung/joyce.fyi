@@ -1,0 +1,12 @@
+{{ define "main" }}
+    {{ .Content }}
+
+    {{ range .Site.Data.projects.list }}
+        <h2>{{ .year }}</h2>
+        <ul class="project-list">
+            {{ range sort .pubs "name" "asc" }}
+                {{ partial "poem.html" . }}
+            {{ end }}
+        </ul>
+    {{ end }}
+{{ end }}

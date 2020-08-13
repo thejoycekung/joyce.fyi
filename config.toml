@@ -1,0 +1,52 @@
+baseURL = "http://thejoycekung.github.io"
+disablePathToLower = true
+languageCode = "en-us"
+title = "Joyce Kung"
+theme = "cactus"
+
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "Experience"
+url = "/experience"
+weight = 2
+
+[[menu.main]]
+name = "Posts"
+url = "/posts"
+weight = 3
+
+[[menu.main]]
+name = "Publications"
+url = "/writings"
+weight = 4
+
+[params]
+    colortheme = "light"
+    rss = true
+
+    # Main page settings
+    description = "I’m currently finishing my final year of Computer Science at the University of Waterloo, with a minor in English Language and Literature. I believe in writing good documentation, empathy in tech, the power of kind mentorship."
+    mainSection = "posts"
+    postsOnHomePage = 4
+    tagsOverview = false
+    projectsUrl = "writings"
+
+    [[params.social]]
+    name = "twitter"
+    link = "https://twitter.com/commitsbyjoyce"
+
+    [[params.social]]
+    name = "github"
+    link = "https://github.com/thejoycekung"
+
+    [[params.social]]
+    name = "linkedin"
+    link = "https://www.linkedin.com/in/thejoycekung"
+
+    [[params.social]]
+    name = "email"
+    link = "thejoycekung@gmail.com"  # no need for "mailto:" in the head
