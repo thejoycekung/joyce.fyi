@@ -29,7 +29,7 @@ weight = 4
     rss = true
 
     # Main page settings
-    description = "I’m currently finishing my final year of Computer Science at the University of Waterloo, with a minor in English Language and Literature. I believe in writing good documentation, empathy in tech, the power of kind mentorship."
+    description = "I’m currently finishing my final year of Computer Science at the University of Waterloo, with a minor in English Language and Literature. I believe in good writing (docs, code, and words), empathy in tech, and the power of kind mentorship."
     mainSection = "posts"
     postsOnHomePage = 4
     tagsOverview = false
@@ -46,7 +46,3 @@ weight = 4
     [[params.social]]
     name = "linkedin"
     link = "https://www.linkedin.com/in/thejoycekung"
-
-    [[params.social]]
-    name = "email"
-    link = "thejoycekung@gmail.com"  # no need for "mailto:" in the head

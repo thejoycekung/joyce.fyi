@@ -11,6 +11,9 @@
             - {{ .issue_name }}
         {{ end }}
     {{ end }}
+    {{ if ne .genre "poetry" }}
+        ({{ .genre }})
+    {{ end }}
     {{ if .is_forthcoming }}
         <i>(forthcoming)</i>
     {{ end }}
