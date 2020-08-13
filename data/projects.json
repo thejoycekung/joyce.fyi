@@ -1,0 +1,75 @@
+{
+    "list": [
+        {
+            "year": 2020,
+            "pubs":[
+                {
+                    "name": "just peachy",
+                    "genre": "poetry",
+                    "url": "https://www.perhappened.com/justpeachyjoycekung.html",
+                    "publication": "Perhappened Magazine",
+                    "publication_url": "https://www.perhappened.com",
+                    "issue_num": 3,
+                    "issue_name": "HEATWAVE",
+                    "is_forthcoming": false
+                },
+                {
+                    "name": "this is diagonalization",
+                    "genre": "poetry",
+                    "publication": "Sine Theta Magazine",
+                    "publication_url": "https://www.sinetheta.net",
+                    "issue_num": 16,
+                    "issue_name": "VERTEX 角",
+                    "is_forthcoming": true
+                },
+                {
+                    "name": "restless",
+                    "genre": "poetry",
+                    "url": "https://formidablewoman.org/issue-no-1-vol-2-spring-2020",
+                    "publication": "fws: a journal of literature and art",
+                    "publication_url": "https://formidablewoman.org/",
+                    "issue_num": 1,
+                    "issue_name": "Vol 2 - Renga",
+                    "is_forthcoming": false
+                }
+            ]
+        },
+        {
+            "year": 2015,
+            "pubs": [
+                {
+                    "name": "So this is real. And this is Not Camp.",
+                    "genre": "creative non-fiction",
+                    "url": "https://medium.com/@thejoycekung/so-this-is-real-and-this-is-not-camp-cfac27c56862",
+                    "publication": "Medium (personal)",
+                    "publication_url": "https://medium.com/@thejoycekung",
+                    "is_forthcoming": false
+                },
+                {
+                    "name": "Decisions, Decisions ...",
+                    "genre": "creative non-fiction",
+                    "url": "https://medium.com/yuniversity-interns/decisions-decisions-9ca7683a2a82",
+                    "publication": "YUNiversity Interns",
+                    "publication_url": "https://medium.com/yuniversity-interns/",
+                    "is_forthcoming": false
+                },
+                {
+                    "name": "Writer's Block",
+                    "genre": "creative non-fiction",
+                    "url": "https://medium.com/yuniversity-interns/writer-s-block-b81e25bfbb57",
+                    "publication": "YUNiversity Interns",
+                    "publication_url": "https://medium.com/yuniversity-interns/",
+                    "is_forthcoming": false
+                },
+                {
+                    "name": "'Chat Tics': The Good, the Bad, the Ugly, and the 'Same'!",
+                    "genre": "creative non-fiction",
+                    "url": "https://medium.com/yuniversity-interns/chat-tics-the-good-the-bad-the-ugly-and-the-same-134aeadeb690",
+                    "publication": "YUNiversity Interns",
+                    "publication_url": "https://medium.com/yuniversity-interns/",
+                    "is_forthcoming": false
+                }
+            ]
+        }
+    ]
+}
