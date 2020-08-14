@@ -7,8 +7,8 @@ draft: true
 
 Last week I had the chance to participate in the SANS Interactive Beginner Challenge CTF as part of a qualification round for the [SANS Security Training Scholarship by Women in Cybersecurity (WiCyS)](https://www.wicys.org/sans-security-training-scholarship). This was a closed, Jeopardy-style CTF that ran for four days (Aug 7-10). It was also a solo CTF, although we did have a Slack channel where people occasionally shared hints to especially hard-to-solve problems.
 
-For each challenge I'll be sharing a short description of the problem, steps I took to solve it, a list of tools I used, and the flag itself. Since this is a beginner CTF, I took special care to explain the tools (especially the command-line ones) I used.  
-If you're interested in seeing a particular challenge, open the hamburger menu on the top right to navigate by headings. They are organized by "difficulty" as listed on Tomahawque.
+For each challenge I'll be sharing a short description of the problem, steps I took to solve it, a list of tools I used, and the flag itself. Since this is a beginner CTF, I tried to explain/link the tools (especially the command-line ones, as indicated in `code`) I used.  
+If you're interested in seeing a particular challenge, open the menu to navigate by headings. They are organized by "difficulty" as listed on Tomahawque.
 
 A note on tooling: my setup is a Windows 10 computer with WSL2 enabled, and for these challenges I was using Google Chrome and Windows Terminal in a `zsh` prompt.
 
@@ -29,8 +29,8 @@ This took me a really long time to solve (despite being "easy"!), but eventually
 
 ![Screenshot of console for LingoFlow](/img/w01-flag.jpg)
 
-Tools: Chrome Dev Console  
-Flag: Consolel0ggr3
+**Tools**: Chrome Dev Console  
+**Flag**: Consolel0ggr3
 ### A01
 
 This challenge consisted of a zip file, which when unzipped, gave a photo of a white man with Morse code in the top-left corner.
@@ -41,9 +41,9 @@ Using a [Morse code converter](https://morsecode.world/international/translator.
 
 ![Screenshot of Morse code input and flag](/img/a01-flag.jpg)
 
-Tools: [Morse code converter](https://morsecode.world/international/translator.html)  
-Flag: MORCEFORCE###  
-Further reading: Google offers a Morse code keyboard and [learning site](https://morse.withgoogle.com/learn/) that are quite fun and easy to move through!
+**Tools**: [Morse code converter](https://morsecode.world/international/translator.html)  
+**Flag**: MORCEFORCE###  
+**Further reading**: Google offers a Morse code keyboard and [learning site](https://morse.withgoogle.com/learn/) that are quite fun and easy to move through!
 ### FE01
 
 This challenge consisted of a zip file, which when unzipped, gave a Rich Text Format entitled `document.rtf`.
@@ -54,8 +54,8 @@ I struggled with this one a lot too - until I was tipped that I can change the t
 
 ![Screenshot of flag text in Microsoft Word](/img/fe01-flag.jpg)
 
-Tools: Microsoft Word  
-Flag: 𝑛𝑖𝐶𝑒𝐴𝑛𝐷𝐸𝑎𝑠𝑦10018
+**Tools**: Microsoft Word  
+**Flag**: 𝑛𝑖𝐶𝑒𝐴𝑛𝐷𝐸𝑎𝑠𝑦10018
 
 ### W03
 
@@ -75,16 +75,16 @@ Adjusting the linked asset to be `assets/images/flag.png` reveals the image:
 
 ![Meme titled "The flag is" of someone slamming a blue button labelled with the flag](/img/w03-flag.png)
 
-Tools: Chrome Dev Tools  
-Flag: FIXINGBROKENL1NKS
+**Tools**: Chrome Dev Tools  
+**Flag**: FIXINGBROKENL1NKS
 ### C01
 
 Unfortunately the challenge description was essential here: it contained the ciphertext needed to obtain the flag. The description also hinted that the method used here is related to a famous Roman.
 
 The famous Roman really gives it away here, but the ciphertext is encoded using a Caesar cipher; in particular, ROT13. Using any Caesar cipher decoder will reveal the flag.
 
-Tools: [Caesar cipher decoder](https://gchq.github.io/CyberChef/#recipe=ROT13(true,true,13))  
-Further reading: [Caesar ciphers](https://en.wikipedia.org/wiki/Caesar_cipher) don't *just* refer to [ROT13](https://en.wikipedia.org/wiki/ROT13) - in fact, it's any "shift" cipher. Also, ROT13 is its own inverse (since the alphabet is 26 letters long).
+**Tools**: [Caesar cipher decoder](https://gchq.github.io/CyberChef/#recipe=ROT13(true,true,13))  
+**Further reading**: [Caesar ciphers](https://en.wikipedia.org/wiki/Caesar_cipher) don't *just* refer to [ROT13](https://en.wikipedia.org/wiki/ROT13) - in fact, it's any "shift" cipher. Also, ROT13 is its own inverse (since the alphabet is 26 letters long).
 ### CE01
 
 This challenge was another zip file, which contained a single file `flag.txt`. Opening this file in Notepad shows a bunch of numbers:
@@ -99,13 +99,13 @@ Using an [octal to text converter](https://gchq.github.io/CyberChef/#recipe=From
 
 Sweeeeeeeeeeet.
 
-Tools: [Octal to Text converter](https://gchq.github.io/CyberChef/#recipe=From_Octal('Space'))  
-Flag: eightByEIgHT9100012
+**Tools**: [Octal to Text converter](https://gchq.github.io/CyberChef/#recipe=From_Octal('Space'))  
+**Flag**: eightByEIgHT9100012
 ### FE02
 
 Yet another zip file challenge! This zip contained a PDF file entitled `document.pdf`, while the challenge description noted that the PDF's layers were still intact.
 
-Opening the file in Adobe Acrobat Reader, we see immediately that some of the words/phrases in the PDF have been redacted - including the flag:
+Opening the file in Adobe Acrobat Reader, we see immediately that some of the words/phrases in the PDF have been redacted - including the **Flag**:
 
 ![Screenshot of document.pdf](/img/fe02.jpg)
 
@@ -115,8 +115,8 @@ However, playing with the PDF a bit more, I realise you can still select the "re
 
 ![Screenshot of document flag as note](/img/fe02-flag.jpg)
 
-Tools: Adobe Acrobat Reader (really, any PDF tool)  
-Flag: n1CeReDaCTION-sureLYNot911081
+**Tools**: Adobe Acrobat Reader (really, any PDF tool)  
+**Flag**: n1CeReDaCTION-sureLYNot911081
 ### L01
 
 More zip files! This challenge zip contained an access log `access.log` to a webserver, and the description told us to look at the "200" HTTP responses to find the flag.
@@ -131,9 +131,9 @@ By running `grep "200" access.log | less`, we can view our search for "200" easi
 
 Looking back, using `grep "f.l.a.g" access.log | less` would have been much more efficient, since we can use regular expressions to our advantage. However, it wasn't clear before `grep`-ing that the flag would be masked! 
 
-Tools: [`grep`](https://linux.die.net/man/1/grep), [`less`](https://linux.die.net/man/1/less)  
-Flag: Ma3terLogPars3r  
-Further reading: The logs mention [CVE-2014-6271](https://cve.mitre.org/cgi-bin/cvename.cgi?name=cve-2014-6271) several times, and many of the 404 results are directed towards `0LX9YJ4M` with a variety of extensions. As of yet, unsure as to `0LX9YJ4M`'s significance.   
+**Tools**: [`grep`](https://linux.die.net/man/1/grep), [`less`](https://linux.die.net/man/1/less)  
+**Flag**: Ma3terLogPars3r  
+**Further reading**: The logs mention [CVE-2014-6271](https://cve.mitre.org/cgi-bin/cvename.cgi?name=cve-2014-6271) several times, and many of the 404 results are directed towards `0LX9YJ4M` with a variety of extensions. As of yet, unsure as to `0LX9YJ4M`'s significance.   
 If you're curious about regular expressions, [Regexr](https://regexr.com/) and [Regex101](https://regex101.com/) are excellent tools for creating regular expressions and offer references/cheat sheets.
 ### F03
 
@@ -149,8 +149,8 @@ Again scrolling through, we eventually find the flag. You'll notice that it's mu
 
 ![Terminal screenshot of flag](/img/f03-flag.jpg)
 
-Tools: [`xxd`](https://linux.die.net/man/1/xxd), [`less`](https://linux.die.net/man/1/less)  
-Flag: PNGHaxor1337  
+**Tools**: [`xxd`](https://linux.die.net/man/1/xxd), [`less`](https://linux.die.net/man/1/less)  
+**Flag**: PNGHaxor1337  
 ### FM02
 
 More. Zips. This challenge zip gave a program simply entitled `file` with a corrupted header, and we were told to fix it in order to get the flag.  
@@ -179,9 +179,9 @@ Both of which didn't work. However, Jodi pointed out that inserting *one* line o
 
 Running this new file then outputted the flag immediately.
 
-Tools: [`file`](https://linux.die.net/man/1/file), [`hexedit`](https://linux.die.net/man/1/hexedit), [hexed.it](https://hexed.it) (web), [`readelf`](https://linux.die.net/man/1/readelf)  
-Flag: headersAreImportANT91-91  
-Further reading: [Magic bytes](https://en.wikipedia.org/wiki/Magic_number_(programming)#In_files), [ELF files](https://en.wikipedia.org/wiki/Executable_and_Linkable_Format)
+**Tools**: [`file`](https://linux.die.net/man/1/file), [`hexedit`](https://linux.die.net/man/1/hexedit), [hexed.it](https://hexed.it) (web), [`readelf`](https://linux.die.net/man/1/readelf)  
+**Flag**: headersAreImportANT91-91  
+**Further reading**: [Magic bytes](https://en.wikipedia.org/wiki/Magic_number_(programming)#In_files), [ELF files](https://en.wikipedia.org/wiki/Executable_and_Linkable_Format)
 ### W02
 
 This challenge led us to [a website "Firemail"](https://stoic-brattain-6dcbf9.netlify.app/w02/), which featured a login screen with the subtitle "Secure Webmail BETA". The description told us that the flag would be found within the source code.
@@ -200,9 +200,9 @@ Then I go digging through the source. Turns out their form needs a proper error 
 
 Navigating to `error-page.html` on this site then reveals the flag.
 
-Tools: Chrome Dev Tools  
-Flag: W3bD3buggerLevel1337  
-Further reading: [SQL injections, and how to do them](https://owasp.org/www-community/attacks/SQL_Injection)
+**Tools**: Chrome Dev Tools  
+**Flag**: W3bD3buggerLevel1337  
+**Further reading**: [SQL injections, and how to do them](https://owasp.org/www-community/attacks/SQL_Injection) (although not relevant for this challenge)
 ### WE01
 
 This challenge led us to a website simply titled, "Nothing to see here..." with a GIF of Spongebob furiously fanning flames with his own breath. The description told us that there was a hidden directory where we could then find the flag.
@@ -219,9 +219,9 @@ URL Fuzzer allows you to discover hidden directories and files given a domain, w
 
 Bingo. Navigating to the `security` directory, we get one entry: `flag.txt`, which is exactly what we need.
 
-Tools: [URL Fuzzer](https://pentest-tools.com/website-vulnerability-scanning/discover-hidden-directories-and-files)  
-Flag: verySecUReDireCToRY_1180018  
-Further reading: [On fuzzing, as a testing technique in general](https://owasp.org/www-community/Fuzzing)
+**Tools**: [URL Fuzzer](https://pentest-tools.com/website-vulnerability-scanning/discover-hidden-directories-and-files)  
+**Flag**: verySecUReDireCToRY_1180018  
+**Further reading**: [On fuzzing, as a testing technique in general](https://owasp.org/www-community/Fuzzing)
 ### BE01
 
 This challenge brought us back to the zip file. The file contained is a file simply called `program`; although `file program` and `readelf` both declared it to be an ELF file, I had problem running it on my machine.
@@ -230,8 +230,8 @@ Fortunately, my old friend `xxd` was back. Running `xxd program | less`, like we
 
 ![Terminal screenshot featuring ASCII text with flag, followed by "I don't do anything really ...... I swear I'm not hiding anything. Nothing at all........;"](/img/be01.jpg)
 
-Tools: [`xxd`](https://linux.die.net/man/1/xxd), [`less`](https://linux.die.net/man/1/less)  
-Flag: sTriNGS-r-EZ-7819
+**Tools**: [`xxd`](https://linux.die.net/man/1/xxd), [`less`](https://linux.die.net/man/1/less)  
+**Flag**: sTriNGS-r-EZ-7819
 ### WE02
 
 This challenge brought us to [a website that simply taunted, "Bet you can't view my source"](https://ggcs-we02.allyourbases.co/). The description told us that there was a flag hidden in the source code, though - so time to go digging through.
@@ -254,8 +254,8 @@ So dead ends, all around. Looking back on the homepage, I realise I missed somet
 
 `else` sounds pretty darn suspicious, so navigating to that component URL shows the flag immediately.
 
-Tools: Chrome Dev Tools, [unminify](https://unminify.com/)  
-Flag: webPACkEd-AlRiGHT_7182
+**Tools**: Chrome Dev Tools, [unminify](https://unminify.com/)  
+**Flag**: webPACkEd-AlRiGHT_7182
 ### WH03
 
 This challenge leads to [a website simply with a blank screen](https://ggcs-wh03.allyourbases.co/). The description is, really, equally unhelpful.  
@@ -285,7 +285,7 @@ Scrolling through the source code more, I find a variable `seq` that appears to 
 
 ![Screenshot of `seq` variable](/img/wh03-seq.jpg)
 
-However, I don't really speak hexadecimal, and looking at the `b` function is a nightmare in itself. The `seq` variable is used in this function which prints the flag:
+However, I don't really speak hexadecimal, and looking at the `b` function is a nightmare in itself. The `seq` variable is used in this function which prints the **Flag**:
 
 ![Screenshot of flag function](/img/wh03-flag-code.jpg)
 
@@ -301,14 +301,16 @@ So, I find the value of `h[b("0x23", "yOrU")]` to see what the ending index is, 
 
 ![Screenshot of console printing the length 9, and the flag](/img/wh03-flag-console.jpg)
 
-Tools: Chrome Dev Tools, [unminify](https://unminify.com/)  
-Flag: rANDom_VICTORy_113
+**Tools**: Chrome Dev Tools, [unminify](https://unminify.com/)  
+**Flag**: rANDom_VICTORy_113
 ### Conclusion
 
 This was my second CTF ever, and the first where I actually completed all the challenges! Overall I placed 14th out of 449 players, and I'm quite happy with that.
 
 Regretfully I didn't think of doing a write-up *while* I was doing the CTF, and the CTF platform Tomahawque does not allow players to view challenges once the event has finished. Thus, screenshots/exact wording of the actual challenge descriptions are limited/non-existent.
 
-Doing this writeup as one long piece after the CTF was also a pain, just because I had to go through the trouble of, basically, redoing all the challenges (with the exception of Caesar) without having access to them! Which made it ... difficult.
+Doing this writeup as one long piece after the CTF was also a pain, just because I had to go through the trouble of, basically, redoing all the challenges (with the exception of Caesar) without having access to them! Which made it ... difficult. 
 
 Overall, I think this was really good for a beginner CTF, just because most of the challenges were relatively easy to understand. My favourite challenges were definitely the ones I could instantly use `xxd` on - like [BE01](#be01) and [F03](#f03). Some challenges were quite hard - [FM02](#fm02) and [WH03](#wh03) in particular - and required a lot more work, but that was good - it gave me a chance to learn more tools! On the whole, it was a positive experience and I'm so glad I got a chance to play.
+
+If you have a question or comment about this write-up, feel free to reach out to me on Twitter [@commitsbyjoyce](https://twitter.com/commitsbyjoyce).
