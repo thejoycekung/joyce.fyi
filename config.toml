@@ -24,6 +24,12 @@ name = "Publications"
 url = "/writings"
 weight = 4
 
+[markup]
+  [markup.tableOfContents]
+    endLevel = 3
+    ordered = false
+    startLevel = 1
+
 [params]
     colortheme = "light"
     rss = true
