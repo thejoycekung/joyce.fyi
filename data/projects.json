@@ -16,11 +16,12 @@
                 {
                     "name": "this is diagonalization",
                     "genre": "poetry",
+                    "url": "https://www.blurb.com/b/10263109-sin-16-vertex",
                     "publication": "Sine Theta Magazine",
                     "publication_url": "https://www.sinetheta.net",
                     "issue_num": 16,
                     "issue_name": "VERTEX 角",
-                    "is_forthcoming": true
+                    "is_forthcoming": false
                 },
                 {
                     "name": "restless",
