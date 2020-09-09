@@ -1,6 +1,10 @@
 ---
 title: "Linux Upskill Challenge: Setting up on Google Cloud Platform"
-category: upskill
+categories: 
+- writeup
+tags:
+- linux
+- gcp
 date: 2020-09-06T14:02:54-04:00
 ---
 

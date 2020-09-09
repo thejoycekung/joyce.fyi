@@ -3,6 +3,7 @@ disablePathToLower = true
 languageCode = "en-us"
 title = "Joyce Kung"
 theme = "cactus"
+show_updated = false
 
 [[menu.main]]
 name = "Home"
