@@ -19,7 +19,7 @@ Challenges we made a decent attempt at completing (or successfully solved) are t
 
 Down Under CTF 2020 ran from Friday, September 18 5AM EDT to Sunday, September 20 5AM EDT (7PM Australian Eastern Time). There were [over 3000 participants](https://twitter.com/DownUnderCTF/status/1307651854134734848), and over 1000 teams on the scoreboard.
 
-Our team was called "why not make team" (... this is a long story), and consisted of me, Dean Jiao, and Ruju Jambusara. If you're curious about how we did overall, you can checkout [our team stats](#conclusion) near the end.
+Our team was called "why not make team" (... this is a long story), and consisted of me, Dean Jiao, and Ruju Jambusaria. If you're curious about how we did overall, you can checkout [our team stats](#conclusion) near the end.
 
 There were seven challenge categories, with difficulties ranging from "sanity check" to "insane".
 1. [OSInt](#osint)
@@ -47,7 +47,7 @@ Dipping into the followers, we then found [this person, Emily Waters](https://ww
 Whom we suspected to be the "mum" referenced. However, entering `DUCTF{emily_waters}` didn't work, and we realised there was a middle name from the email:
 
 ```sh
-emilytwaters@gmail.com
+emilytwaters92@gmail.com
 ```
 
 Sending an email to that email address got us an out-of-office reply:
@@ -77,9 +77,7 @@ One of their Tweets mentioned "deleting a Tweet that contained personal informat
 ##  I think this one is really going to take off
 **Difficulty**: Medium  
 *You'll never believe it but I swear I saw one of those big American refueling planes flying around right over the boxing croc on the first of September. If only I knew its registration number... I bet I'd be able to find out all kinds of information, like the day it first flew!  
-The flag will be the date of the first flight of the plane I saw in this format: DUCTF{DD-MM-YY}
-
-HINT: What kind of plane did they see? Did you know some flight trackers don't track all kinds of planes!"*
+The flag will be the date of the first flight of the plane I saw in this format: DUCTF{DD-MM-YY}*
 
 *Fun fact*: we were the 10th team to solve this one!
 
@@ -134,7 +132,7 @@ Having solved Petstagram, we had access to [the second post on emwaters92's acco
 
 Using a [DTMF tone converter](http://dialabc.com/sound/detect/), followed by a [T9 Decoder](https://www.dcode.fr/t9-cipher), we were able to get the message:
 
-```
+```sh
 6338063028090300
 MEET ME AT 9:30
 ```
@@ -238,10 +236,16 @@ with open('secret_message.txt', 'r') as f:
     print(msg)
 ```
 
-Running this script then created the following string:
+Running this script then created the following string (line separated for readability):
 
 ```sh
-010001000101010101000011010101000100011001111011011010010101111101010010001100110110110001001100011010010101111101101100001100000011000000110000001100000100111100110000011011110110111100110000011101100011001101011111001101010110001100110000011011010011000001111101000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+010001000101010101000011010101000100011001111011011010010101111101010010001
+100110110110001001100011010010101111101101100001100000011000000110000001100
+000100111100110000011011110110111100110000011101100011001101011111001101010
+110001100110000011011010011000001111101000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000000000000000000000000000000
+000000000000
 ```
 
 Trimming off the extra 0s at the end, we then can get the flag.
@@ -349,10 +353,13 @@ Trying `fl4g.txt` as a path doesn't work, but `humen.txt` leads us to the `/Bend
 
 ![Propaganda poster of Bender from Futurama, with the text, "Not the leader we want" at the top, and "But the leader we deserve" at the bottom](/img/ductf-2020/bender.jpeg)
 
-Running `exiftool` on this image then gives us this binary string as the "Artist":
+Running `exiftool` on this image then gives us this binary string as the "Artist" (line-separated for readability):
 
 ```sh
-011000010110010001101101011010010110111000111010010101000110100001101001011100110010110101001001011100110010110101010100011010000110010100101101010000010110010001101101011010010110111000101101010100000110000101110011011100110111011101101111011100100110010000101101010110000100010000100001
+011000010110010001101101011010010110111000111010010101000110100001101001011
+100110010110101001001011100110010110101010100011010000110010100101101010000
+010110010001101101011010010110111000101101010100000110000101110011011100110
+111011101101111011100100110010000101101010110000100010000100001
 ```
 
 Which, when translated from binary, gives us the actual admin credentials:
@@ -384,10 +391,13 @@ Notice how there is an item `SECRET_KEY`, which maps the `app.jinja_env.globals[
 **Difficulty**: Beginner  
 *ROT13 is boring!*
 
-The challenge text is as follows:
+The challenge text is as follows (line-separated for readability):
 
 ```md
-Ypw'zj zwufpp hwu txadjkcq dtbtyu kqkwxrbvu! Mbz cjzg kv IAJBO{ndldie_al_aqk_jjrnsxee}. Xzi utj gnn olkd qgq ftk ykaqe uei mbz ocrt qi ynlu, etrm mff'n wij bf wlny mjcj :).
+Ypw'zj zwufpp hwu txadjkcq dtbtyu kqkwxrbvu! 
+Mbz cjzg kv IAJBO{ndldie_al_aqk_jjrnsxee}. 
+Xzi utj gnn olkd qgq ftk ykaqe uei mbz ocrt qi ynlu, 
+etrm mff'n wij bf wlny mjcj :).
 ```
 
 We ran this text through a few ROT decoders, but weren't able to get anything sensible out of it. However, looking again at the structure of the sentences, we knew that the flag would have to be in the format of `DUCTF{...}`. There was only one place in the text that had this pattern:
@@ -472,7 +482,10 @@ None of these yielded the flag.
 At some point, the organizers revealed my least favourite hint ever, which was:
 
 ```sh
-01101000 01100001 01110110 01100101 00100000 01111001 01101111 01110101 00100000 01100011 01101111 01101110 01110011 01101001 01100100 01100101 01110010 01100101 01100100 00100000 01100010 01101001 01101110 01100001 01110010 01111001 00111111
+01101000 01100001 01110110 01100101 00100000 01111001 01101111 01110101 
+00100000 01100011 01101111 01101110 01110011 01101001 01100100 01100101 
+01110010 01100101 01100100 00100000 01100010 01101001 01101110 01100001 
+01110010 01111001 00111111
 ```
 
 Or, `have you considered binary?`.
@@ -481,11 +494,12 @@ Or, `have you considered binary?`.
 
 *Post-CTF*: The very beginning of the official writeup for this challenge states:
 
-```sh
-thought that this would be a fun challenge for people starting out! on second thoughts, it mightve been highly annoying and not "beginner"
+```md
+thought that this would be a fun challenge for people starting out! 
+on second thoughts, it mightve been highly annoying and not "beginner"
 ```
 
-I agree. It *was* highly annoying, and we didn't even manage to solve it.
+I agree. It *was* highly annoying.
 
 Overall, the technique required was to order the dots from top to bottom, left to right, and shuffle the corresponding `lol` string as well. Then, the binary string can be translated to ASCII.
 
@@ -493,7 +507,7 @@ Overall, the technique required was to order the dots from top to bottom, left t
 **Tools**: [Binary decoder](https://gchq.github.io/CyberChef/#recipe=From_Binary('Space'))
 
 ## Welcome!
-**Difficulty**: Beginner
+**Difficulty**: Beginner  
 *Welcome to DUCTF!*
 
 This challenge asked us to `ssh` using these credentials:
@@ -546,7 +560,7 @@ p3
 sI4
 I112
 sI5
-[more lines go here]
+# more lines go here
 S'}'
 p4
 sI24
@@ -555,9 +569,9 @@ p5
 s.
 ```
 
-So it looks like the middle bits between the S'{' and S'}' were about where the flag would sit. We weren't sure what to do with this, but with the line `how to use pickle` and the obfuscation note from the challenge description, we did some Googling around obfuscation and `pickle`.
+So it looks like the middle bits between the `S'{'` and `S'}'` were about where the flag would sit. We weren't sure what to do with this, but with the line `how to use pickle` and the obfuscation note from the challenge description, we did some Googling around obfuscation and `pickle`.
 
-`pickle` is a Python library used to (de-)serialize Python objects, where the objects are turned into bytestreams and vice-versa. However, this didn't really help us until we found [this StackOverflow answer](https://stackoverflow.com/questions/41005412/how-to-turn-pickle-output-into-an-unreadable-format):
+[`pickle` is a Python library](https://docs.python.org/3/library/pickle.html) used to (de-)serialize Python objects, where the objects are turned into bytestreams and vice-versa. However, this didn't really help us until we found [this StackOverflow answer](https://stackoverflow.com/questions/41005412/how-to-turn-pickle-output-into-an-unreadable-format):
 
 ![Heres [sic] a snippet from a save file i created with pickle (it's a game): S'Strength' p4 I5 sS'Health' p8 I100](/img/ductf-2020/in-a-pickle-so.png)
 
@@ -574,7 +588,11 @@ with open('data', 'r') as f:
 This then spat out:
 
 ```sh
-{1: 'D', 2: 'UCTF', 3: '{', 4: 112, 5: 49, 6: 99, 7: 107, 8: 108, 9: 51, 10: 95, 11: 121, 12: 48, 13: 117, 14: 82, 15: 95, 16: 109, 17: 51, 18: 53, 19: 53, 20: 52, 21: 103, 22: 51, 23: '}', 24: "I know that the intelligence agency's are onto me so now i'm using ways to evade them: I am just glad that you know how to use pickle. Anyway the flag is "}
+{1: 'D', 2: 'UCTF', 3: '{', 4: 112, 5: 49, 6: 99, 7: 107, 8: 108, 9: 51, 
+10: 95, 11: 121, 12: 48, 13: 117, 14: 82, 15: 95, 16: 109, 17: 51, 18: 53,
+ 19: 53, 20: 52, 21: 103, 22: 51, 23: '}', 24: "I know that the 
+ intelligence agency's are onto me so now i'm using ways to evade them: I 
+ am just glad that you know how to use pickle. Anyway the flag is "}
 ```
 
 Which strings together:
@@ -679,7 +697,8 @@ Then it was just a matter of reading morse from this mess.
 Which still took a while. Don't get me wrong. But we ended up with this:
 
 ```sh
--.-. .- .-. .- -- . .-.. .-.. --- / -.- --- .- .-.. .- ... / .- .-. . / - .... . / -... . ... - / -.- --- .- .-.. .- ...
+-.-. .- .-. .- -- . .-.. .-.. --- / -.- --- .- .-.. .- ... / 
+.- .-. . / - .... . / -... . ... - / -.- --- .- .-.. .- ...
 ```
 
 Which, when translated from morse code, gave us the flag.
@@ -741,13 +760,13 @@ __FRAME_END__
 
 Along with words like `this`, `crap`, `what`, `easy`, `heck` interspersed. 
 
-One of the interesting lines says
+One of the lines says
 
 ```sh
-d1d_You_Just_ltrace_[...]
+d1d_You_Just_ltrace_
 ```
 
-With some garbage following, which seems kind of interesting. However, we stopped here and didn't look into it anymore.
+which we saw repeated when we tried running `ltrace`, except there was some garbage behind it there. However, we stopped here and didn't look into it anymore.
 
 *Post-CTF*: We didn't know it then, but we were literally *staring at the flag* after running `ltrace`.
 
@@ -765,7 +784,7 @@ The attachment is a Word(-like) file; however, opening it causes it to disappear
 * Trying to open it in Word/Notepad indicates the file has a virus and it can't be opened
 * Trying to "Open and Repair" in Word also does nothing
 
-*Post-CTF*: Apparently the key to this was [VBA](link goes here). According to the offical writeup, all we needed to do was [set a breakpoint in the Visual Basic Editor](https://www.excel-easy.com/vba/examples/debugging.html) where the flag would be used in `strcomp()`, and then check the value.
+*Post-CTF*: Apparently the key to this was [VBA](https://en.wikipedia.org/wiki/Visual_Basic_for_Applications). According to the offical writeup, all we needed to do was [set a breakpoint in the Visual Basic Editor](https://www.excel-easy.com/vba/examples/debugging.html) where the flag would be used in `strcomp()`, and then check the value.
 
 **Flag**: DUCTF{Macr0_h4x0rman}  
 **Tools**: Visual Basic Editor  
@@ -797,6 +816,6 @@ Some other interesting facts:
 * Over half of the challenges we solved were in the [misc](#misc) category
 * We solved 6 "beginner" challenges, 3 "easy", both sanity-checks, and 1 "medium"
 
-We really enjoyed the CTF, not because we felt like we learned a lot - although we definitely did - but mostly because it was all so *Australian*. As three people who grew up in Canada and have never traveled to Australia, it was funny seeing and learning so much about Australia (we learned what the boxing croc is! or who Clive Palmer is!).
+We really enjoyed the CTF, not because we felt like we learned a lot - although we definitely learned something - but mostly because it was all so *Australian*. As three people who grew up in Canada and have never traveled to Australia, it was fun seeing and learning so much about Australia (we learned what the boxing croc is! or who Clive Palmer is!).
 
 Looking forward to Down Under CTF 2021 - maybe next year we'll be better 😊
