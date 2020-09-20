@@ -6,7 +6,6 @@ categories:
 tags:
 - ctf
 - security
-draft: true
 ---
 
 This past weekend, my friends and I had the chance to participate in [Down Under CTF](https://downunderctf.com/) 2020, a CTF aimed at Australian secondary- and tertiary-school students. Though our team didn't come anywhere close to placing, or even completing all the challenges, we had a fun time and learned some new techniques for our next CTF.
