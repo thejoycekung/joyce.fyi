@@ -15,7 +15,6 @@ This writeup is a team effort by me, [Dean Jiao](https://twitter.com/deanjiao), 
 Challenges we made a decent attempt at completing (or successfully solved) are therefore included below; other challenges are not.
 
 # Background
-
 Down Under CTF 2020 ran from Friday, September 18 5AM EDT to Sunday, September 20 5AM EDT (7PM Australian Eastern Time). There were [over 3000 participants](https://twitter.com/DownUnderCTF/status/1307651854134734848), and over 1000 teams on the scoreboard.
 
 Our team was called "why not make team" (... this is a long story), and consisted of me, Dean, and Ruju. If you're curious about how we did overall, you can checkout [our team stats](#conclusion) near the end.
@@ -36,21 +35,17 @@ There were seven challenge categories, with difficulties ranging from "sanity ch
 Submit his mum's full name in lowercase and with underscores instead of spaces, as the flag: DUCTF{name}*
 
 Given the challenge name, searching on Instagram for Alexandros the cat seemed like a good start. It brought us to [this profile](https://www.instagram.com/alexandrosthecat/):
-
 ![Screenshot of Instagram profile for alexandrosthecat. There are two posts, a black and white photo of a cat and a coloured photo of (presumably) the same cat with a red bow. The account has 9 followers and is following no one.](/img/ductf-2020/petstagram-alexandros.png)
 
 Dipping into the followers, we then found [this person, Emily Waters](https://www.instagram.com/emwaters92/):
-
 ![Screenshot of Instagram profile for emwaters92. There are two posts, a video where the current frame is black and the same black and white cat photo from Alexandros. The accounts has 9 followers and is only following 1 account.](/img/ductf-2020/petstagram-emwaters92.png)
 
 Whom we suspected to be the "mum" referenced. However, entering `DUCTF{emily_waters}` didn't work, and we realised there was a middle name from the email:
-
 ```sh
 emilytwaters92@gmail.com
 ```
 
 Sending an email to that email address got us an out-of-office reply:
-
 ![Email to emilytwaters@gmail.com. Subject line: "Business inquiry: middle name". Body: "Hi there! I love your cat Alexandros! Such a cutie. I have a business inquiry regarding a particular flag. Do you mind if I ask you what your middle name is?"](/img/ductf-2020/petstagram-og.jpg)
 ![Email reply from emilytwaters@gmail.com. Subject line: "Out of Office from September 6th Re: Business inquiry: middle name". Body: "Hello, I will be out of the office from Sunday, September 6th onward. If you need immediate assistance during my absence, that sounds like a you problem. Otherwise, I will probably respond to your emails as soon as possible if I return. Kind regards, Emily Theresa Waters."](/img/ductf-2020/petstagram-reply.png)
 
@@ -67,7 +62,6 @@ Googling `und3m4t3r` or searching for the `und3rm4t3r` user on Discord revealed 
 *Post-CTF*: Turns out we were supposed to look for [them on *Twitter*](https://twitter.com/und3rm4t3r) instead. 
 
 One of their Tweets mentioned "deleting a Tweet that contained personal information", which had been conveniently snapshotted [on the Wayback Machine](http://web.archive.org/web/20200723112257/https://twitter.com/und3rm4t3r):
-
 ![Screenshot from the Wayback Machine of und3rm4t3r's profile. Their profile picture is a man in a hoodie, with only the whites of the eyes showing. Their bio says "This is an account made for a Capture the Flag competition". The most recent Tweet shows the flag](/img/ductf-2020/bad-man-wayback.png)
 
 **Flag**: DUCTF{w4y_b4ck_1n_t1m3_w3_g0}  
@@ -81,17 +75,14 @@ The flag will be the date of the first flight of the plane I saw in this format:
 *Fun fact*: we were the 10th team to solve this one!
 
 We started with Googling the "boxing croc", since we all had no idea what it was:
-
 ![Screenshot of Google info card on the "boxing croc", or rather, the "Big Boxing Crocodile". There is a photo of a crocodile statue wearing boxing gloves, as well as a screenshot of Google Maps showing the boxing croc's location. It is a tourist attraction in Humpty Doo, Australia, and its address is 326 Arnhem Hwy, Humpty Doo NT 0836, Australia.](/img/ductf-2020/take-off-boxing-croc.png)
 
 Looking at a map, we noticed that Darwin International Airport was nearby, so it was likely that any aircraft going over the Boxing Croc was probably heading into or out of Darwin.
-
 ![Screenshot of Google Maps showing Darwin and the boxing croc](/img/ductf-2020/take-off-darwin-map.png)
 
 Next, we looked at a list of American refueling planes, hoping to find a model so we could find flight data for them. This was inconclusive, especially since flight trackers only showed flights from the past 7 days.
 
 We also found [this totally not sketchy site](http://www.planeflighttracker.com/2014/04/united-states-military-aircraft-in.html) for finding the model codes for military aircraft. 
-
 ![Screenshot of United States NATO Military Aircraft Tracker and which aircraft are in operation.](/img/ductf-2020/take-off-aircraft-tracker.png)
 
 However, a whole bunch of googling later, we still found nothing. 
@@ -99,11 +90,9 @@ However, a whole bunch of googling later, we still found nothing.
 We happened upon an article about an [Australian/American Joint Air Force exercise](https://www.pacom.mil/Media/News/News-Article-View/Article/2336270/increasing-interoperability-b-2s-b-1s-join-us-marine-corps-australian-defence-f/) that happened near the given date, and it mentioned a particular refueling plane, the Boeing KC-135R Stratotanker. with model number K35R. 
 
 Still, flight trackers had no historical data going that far back, so we had to get a 7-day free trial for [RadarBox](https://www.radarbox.com/). Searching for all flights with the model K35R, we looked for flights around September 1st.
-
 ![Screenshot of flight list around September 1st](/img/ductf-2020/take-off-flight-list.png)
 
 We eventually found a flight whose path looked like it went over where Boxing Croc would be:
-
 ![Screenshot of flight PEARL02 which curves over to Darwin](/img/ductf-2020/take-off-darwin-flight.png)
 
 Googling the plane registration number: `58-0086` then led to 
@@ -130,7 +119,6 @@ Given the image provided, we figured out a lot of the base information required:
 Having solved Petstagram, we had access to [the second post on emwaters92's account](https://www.instagram.com/p/CEzKUbeAMG-/): a video with beeping in the background, which sounded like a T9 phone keyboard. We also knew that her location tag in this video was the Gelateria on the Docks, near Melbourne's ports.
 
 Using a [DTMF tone converter](http://dialabc.com/sound/detect/), followed by a [T9 Decoder](https://www.dcode.fr/t9-cipher), we were able to get the message:
-
 ```sh
 6338063028090300
 MEET ME AT 9:30
@@ -154,7 +142,6 @@ P.S. The longitude and latitude should be to 3 decimal places (plus if necessary
 Example: DUCTF{latitude_longitude_nameofroad_roadnametype}*
 
 Using the bridge image provided, we were able to find out the type of bridge on Google with a reverse image search.
-
 ![Screenshot of Google reverse image search, showing "trestle" as the recommended search term](/img/ductf-2020/otr-trestle.png)
 
 With this in mind, and knowing the fire tidbit, we began to search for bridges that had had fires nearby. The list we came up with was:
@@ -175,15 +162,12 @@ As it turns out, one of the bridges we had researched (Monbulk) *was* actually t
 *My friend has been sending me lots of WAV files, I think he is trying to communicate with me, what is the message he sent?*
 
 The WAV file that's given sounds like white noise with some patterns:
-
 ![Initial wave spectrum](/img/ductf-2020/spectrum-initial.png)
 
 After some serious noise cancellation in [Audacity](https://www.audacityteam.org/), it started to look like something.
-
 ![Noise-cancelled audio waveform](/img/ductf-2020/spectrum-noise-cancel.png)
 
 Uploading this `.wav` into an [online spectrum analyzer](https://academo.org/demos/spectrum-analyzer/) (like - on the spectrum? get it?) then yielded us the flag.
-
 ![Finaly spectrum analysis, that includes the flag as text](/img/ductf-2020/spectrum-analysis.png)
 
 **Flag**: DUCTF{m4by3_n0t_s0_h1dd3n}  
@@ -222,7 +206,6 @@ Using a steganography cracker called `stegcracker` with `rockyou` could then rev
 The `secret_message.txt` file produced then is just the Australian national anthem. But apparently the extra spaces take advantage of whitespace steganography.
 
 If there is a trailing space at the end of the line, we added a "1"; otherwise, we added a "0". However, the file was also 462 lines long, so it was easier to just script it.
-
 ```python
 with open('secret_message.txt', 'r') as f:
     msg = ""
@@ -236,7 +219,6 @@ with open('secret_message.txt', 'r') as f:
 ```
 
 Running this script then created the following string (line separated for readability):
-
 ```sh
 010001000101010101000011010101000100011001111011011010010101111101010010001
 100110110110001001100011010010101111101101100001100000011000000110000001100
@@ -259,11 +241,9 @@ Trimming off the extra 0s at the end, we then can get the flag.
 *I <3 Pasta! I won't tell you what my special secret sauce is though!*
 
 Navigating to the given page gives us this:
-
 ![Screenshot: title: "My Second Favourite Pasta Sauce". Under: "This is my second favourite pasta sauce! I have safely hidden my favourite sauce!" with a picture of a jar of Leggo's pasta sauce.](/img/ductf-2020/leggos-home.png)
 
 Right-clicking and trying to use `Ctrl+U` to view the source give a popup that simply says "not allowed". However, `Ctrl+Shift+I` still works, allowing us to navigate to "Sources" and look at `disableMouseRightClick.js`, giving us the flag.
-
 ![Screenshot: sources panel on the inspector, showing the contents of `disableMouseRightClick.js`](/img/ductf-2020/leggos-source.png)
 
 **Flag**: DUCTF{n0_k37chup_ju57_54uc3_r4w_54uc3_9873984579843}
@@ -273,7 +253,6 @@ Right-clicking and trying to use `Ctrl+U` to view the source give a popup that s
 *We launched a game and now it is no longer launched :( can you figure out what happened plox. HALP*
 
 The given link takes us to "Epic Website 1", featuring a red banner that says, "GAME STATUS: Broke af", a Youtube video and a button at the bottom that says "Beep Boop".
-
 ![](/img/ductf-2020/badmin-home.png)
 
 Looking in the source, we see that there's a commented out link to `https://epicgame.play.duc.tf`.
@@ -283,7 +262,6 @@ However, navigating to this site did not work, as it could not be loaded.
 *Post-CTF*: Had we looked at the error message more carefully, we would have realised that the specific error message was `DNS_PROBE_FINISHED_NXDOMAIN`, meaning the DNS server could not find a corresponding IP address for this domain.
 
 However, that's not to say there isn't other information on it. Using `dig`, we could run:
-
 ```sh
 dig epicgame.play.duc.tf TXT
 ```
@@ -299,61 +277,51 @@ Revealing a `TXT` record for the given site containing the flag.
 *Come join our homepage design competition and test out your CSS skills!*
 
 Clicking on the link takes us to a `bland`-looking website with a call for the community to help design their site. At the bottom, there's a link to login:
-
 ![Title: "Design our homepage 2020!" with a picture of a bed with fluffy pillow under, from Unsplash. A line of text under that reads: "As you can see, our homepage is currently pretty bland at the moment. We're looking toward the community to design us a new homepage!"](/img/ductf-2020/design-bland.png)
 
 The login screen has only 1 field for the username and after entering one, it leads you here, where you can then enter in a URL for your submission. 
-
 ![A white box on a blue background with text. Title: "Welcome rujube". "About" section has a current rating of 8, with a link to rujube's playground. "Make a submission" section has a URL input field, with a CAPTCHA followed by a green Submit button. Underneath, a red Logout button.](/img/ductf-2020/design-login.png)
 
 *Fun fact*: Submitting https://google.com as the URL gives you a score of 8, apparently.
 
 The link to the playground leads to the original `bland` site, but this time with an "editor" button in the corner:
-
 ![A similar screenshot to the original homepage; however, this time there is a picture of a mountain at sunset, all warm oranges tones, and an editor button in the top right corner.](/img/ductf-2020/design-editor-bland.png)
 
 The editor is initially blank, but you can fill it in with whatever code you want. Here, Ruju filled it in with the initial page source. 
-
 ![](/img/ductf-2020/design-editor.png)
 
 However, it seems that this is invalid. The preview won't load either.
 
 *Post-CTF*: It turns out this challenge was a *lot* more complicated than we'd hoped. Cross-site scripting (through CSS, no less!) was not something we were super familiar with, and reading through [the available writeup](https://github.com/DownUnderCTF/Challenges_2020_public/tree/master/web/design-comp#writeup) made it clear we needed to do a lot of reading.
 
-## Robotsss [GOES HERE]
+## Robotsss
 **Difficulty**: Medium  
 *Us robot devs use better templates than those stupid humans!*
 
 You're redirected to a site for robots, with two cute robots talking under the message "All humans must die". The message also notes you can view the posts after you make an account.
-
 ![Note - all text on the page is in capitals. A top, black, menubar has "Secret Robot Forum" in the left and "Logout" in the right. Title says "Welcome to Secret Robot Forum!!". Underneath, it says "Create an account to view the posts. All humans must die." Under that text, a comic of two robots talking, where one robot (presumably) tells a joke in binary, and the other says, "That's hilarious!".](/img/ductf-2020/robotsss-initial.png)
 
 After registering an account, I'm led to a page with 2 posts.
-
 ![Two post titles: "Message to the robot rebels" and "Message to the robot devs".](/img/ductf-2020/robotsss-posts.png)
 
 In the second post, the message says the flag is located in: `s3cr3t_p4th/robot_fl4g.txt` but appending that to the URL gives a 404 Not Found error.
 
 However, looking in the source for the two posts, we find two binary strings:
-
 ```sh
 011010000111010101101101011001010110111000101110011101000111100001110100
 0110011001101100001101000110011100101110011101000111100001110100
 ```
 
 Translating this gives us two paths:
-
 ```sh
 humen.txt
 fl4g.txt
 ```
 
 Trying `fl4g.txt` as a path doesn't work, but `humen.txt` leads us to the `/Bender` path:
-
 ![Propaganda poster of Bender from Futurama, with the text, "Not the leader we want" at the top, and "But the leader we deserve" at the bottom](/img/ductf-2020/bender.jpeg)
 
 Running `exiftool` on this image then gives us this binary string as the "Artist" (line-separated for readability):
-
 ```sh
 011000010110010001101101011010010110111000111010010101000110100001101001011
 100110010110101001001011100110010110101010100011010000110010100101101010000
@@ -362,21 +330,18 @@ Running `exiftool` on this image then gives us this binary string as the "Artist
 ```
 
 Which, when translated from binary, gives us the actual admin credentials:
-
 ```sh
 admin:This-Is-The-Admin-Password-XD!
 ```
 
 Logging in as the admin for the robotsss site now, we come to the "Admin Terminal", which claims to echo anything we type in.
-
 ![Title: "You have reached the admin terminal! I can echo anything you type in." Under: a text field labelled "Enter a string" that has sample text "e.g. hi" and a black Submit button. Under the Submit button, it says "You typed:"](/img/ductf-2020/robotsss-admin-echo.png)
 
-And around this point, we had no idea what to do.
+And around this point, we had no idea what to do, and it was about 2AM our time (5PM AEST?), so we decided to try as many other challenges as we could.
 
 *Post-CTF*: Apparently this form is vulnerable to server-side template injection, because of Jinja2. Wrapping the contents in `{{ }}` (creating a template) will cause the form to execute the code inside.
 
 So, giving this terminal `{{ config.items() }}` will then spit out:
-
 ![A dictionary of config items.](/img/ductf-2020/robotsss-admin-config.png)
 
 Notice how there is an item `SECRET_KEY`, which maps the `app.jinja_env.globals['getFile']` to the function `getFile`, allowing us to get any file using `getFile`. We can then use the terminal once again to run `getFile('fl4g.txt')`, which will then print the flag.
@@ -391,7 +356,6 @@ Notice how there is an item `SECRET_KEY`, which maps the `app.jinja_env.globals[
 *ROT13 is boring!*
 
 The challenge text is as follows (line-separated for readability):
-
 ```md
 Ypw'zj zwufpp hwu txadjkcq dtbtyu kqkwxrbvu! 
 Mbz cjzg kv IAJBO{ndldie_al_aqk_jjrnsxee}. 
@@ -400,17 +364,14 @@ etrm mff'n wij bf wlny mjcj :).
 ```
 
 We ran this text through a few ROT decoders, but weren't able to get anything sensible out of it. However, looking again at the structure of the sentences, we knew that the flag would have to be in the format of `DUCTF{...}`. There was only one place in the text that had this pattern:
-
 ```sh
 IAJBO{ndldie_al_aqk_jjrnsxee}
 ```
 
 It seemed impossible for all the letters to be shifted the same way, but I pointed out that there could possibly *multiple* ciphers, i.e. each letter was shifted a different amount. Ruju wrote out the messages and noticed the same thing - in fact, we noticed that the ciphers increased by 1 each time (i.e., had a shifting `i`).
-
 ![On dot-grid paper: "IAJBO" with "DUCTF" mapped under it. Below, two written out alphabets with pairs of letters shifted. Below that, math: D to I = 5, A to U = 6, J to C = 7, B to T = 8, O to F = 9.](/img/ductf-2020/roti-shift.jpg)
 
 With this in mind, we set to counting out some letters to form the flag. It took us a couple tries, but we ended up with:
-
 ```sh
 DUCTF{crypto_is_fun_kjqlptzy}
 ```
@@ -427,7 +388,6 @@ But it wasn't.
 *Check out our Twitter! Find the post with the flag! You can give us a follow if you like <3*
 
 Going on the [DUCTF Twitter account](https://twitter.com/downunderctf), we scroll down and see their first Tweet is:
-
 ![A Tweet from the DUCTF Twitter account on July 25: "RFVDVEZ7aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1YZlI5aVk1eTk0c30="](/img/ductf-2020/ductf-tweet.png)
 
 Converting `RFVDVEZ7aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1YZlI5aVk1eTk0c30=` from Base64 (the equals sign giving it away) - we then get the flag.
@@ -440,7 +400,6 @@ Converting `RFVDVEZ7aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1YZlI5aVk1eTk0c30=
 *JOIN OUR DISCORD!*
 
 Looking in the description of the #general channel, it's pretty obvious what the flag is.
-
 ![A screenshot of the Discord top bar, showing the general channel and the flag right next to it](/img/ductf-2020/ductf-discord.png)
 
 **Flag**: DUCTF{c0n6r475_y0u_h4v3_n0w_j01n3d_0ur_4m4z1n6_d15c0rd}
@@ -458,11 +417,9 @@ This was by far the most frustrating challenge in the entire CTF for us, purely 
 Let's begin.
 
 The Down Under CTF website has this beautiful map of dots that forms Australia, and when mousing over the dots, they change colour and form this image:
-
 ![A map of Australia made dots that neatly fall into a grid. Some dots are a darker teal, while other dots are a pale blue-green.](https://codimd.s3.shivering-isles.com/demo/uploads/upload_12bb31f827a527e488c1d0d720f7d95d.png)
 
 Looking into the source code of the map, we see that the colours are controlled by a script called `splash.js`, using this string:
-
 ```javascript
 const lol = "00101000000010000010111101100001101001011101000101101110100001100011111101101010" +
         "1010001111000111101000110010000001000000010010001000011111011101001111101001110111101010" +
@@ -479,7 +436,6 @@ Here are the things we tried:
 None of these yielded the flag. 
 
 At some point, the organizers revealed my least favourite hint ever, which was:
-
 ```sh
 01101000 01100001 01110110 01100101 00100000 01111001 01101111 01110101 
 00100000 01100011 01101111 01101110 01110011 01101001 01100100 01100101 
@@ -492,7 +448,6 @@ Or, `have you considered binary?`.
 *Damn, ya think? Ya think I haven't considered binary yet?*
 
 *Post-CTF*: The very beginning of the official writeup for this challenge states:
-
 ```md
 thought that this would be a fun challenge for people starting out! 
 on second thoughts, it mightve been highly annoying and not "beginner"
@@ -500,7 +455,7 @@ on second thoughts, it mightve been highly annoying and not "beginner"
 
 I agree. It *was* highly annoying.
 
-Overall, the technique required was to order the dots from top to bottom, left to right, and shuffle the corresponding `lol` string as well. Then, the binary string can be translated to ASCII.
+Overall, the technique required was to order the dots from top to bottom, left to right. Since each dot mapped to an index in the `lol` string, the `lol` string had to be reordered as well. Then, the binary string can be translated to ASCII.
 
 **Flag**: DUCTF{i_turn3d_mysE1f_inT0_s0m3_f1ag}  
 **Tools**: [Binary decoder](https://gchq.github.io/CyberChef/#recipe=From_Binary('Space'))
@@ -510,13 +465,12 @@ Overall, the technique required was to order the dots from top to bottom, left t
 *Welcome to DUCTF!*
 
 This challenge asked us to `ssh` using these credentials:
-```
+```sh
 ssh ductf@chal.duc.tf -p 30301
 password: ductf
 ```
 
 Which then led to this beautiful screen.
-
 ![Screenshot of very colourful terminal that is almost full. Each colour is the phrase "Welcome to DUCTF!" or the flag. ](/img/ductf-2020/ductf-terminal.png)
 
 The phrase "Welcome to DUCTF!" kept popping up, filling the terminal and overwriting past phrases as well.
@@ -543,8 +497,7 @@ With the equals sign at the end, the string is a pretty dead giveaway for Base 6
 **Difficulty**: Easy  
 *We managed to intercept communication between und3rm4t3r and his hacker friends. However it is obfuscated using something. We just can't figure out what it is. Maybe you can help us find the flag?*
 
-Looking at the data we get 
-
+Looking at the data we get:
 ```sh
 (dp0
 I1
@@ -570,12 +523,10 @@ s.
 
 So it looks like the middle bits between the `S'{'` and `S'}'` were about where the flag would sit. We weren't sure what to do with this, but with the line `how to use pickle` and the obfuscation note from the challenge description, we did some Googling around obfuscation and `pickle`.
 
-[`pickle` is a Python library](https://docs.python.org/3/library/pickle.html) used to (de-)serialize Python objects, where the objects are turned into bytestreams and vice-versa. However, this didn't really help us until we found [this StackOverflow answer](https://stackoverflow.com/questions/41005412/how-to-turn-pickle-output-into-an-unreadable-format):
-
+[`pickle` is a Python library](https://docs.python.org/3/library/pickle.html) used to (de-)serialize Python objects, where the objects are turned into bytestreams and vice-versa. However, this didn't really help us until we found [this StackOverflow question](https://stackoverflow.com/questions/41005412/how-to-turn-pickle-output-into-an-unreadable-format):
 ![Heres [sic] a snippet from a save file i created with pickle (it's a game): S'Strength' p4 I5 sS'Health' p8 I100](/img/ductf-2020/in-a-pickle-so.png)
 
 Where the data was structured almost exactly like ours! That's when we realised we'd been data that had been pickled, i.e. been the result of `pickle.dumps()`, which means all we had to do was run the reverse:
-
 ```python
 import pickle
 
@@ -585,7 +536,6 @@ with open('data', 'r') as f:
 ```
 
 This then spat out:
-
 ```sh
 {1: 'D', 2: 'UCTF', 3: '{', 4: 112, 5: 49, 6: 99, 7: 107, 8: 108, 9: 51, 
 10: 95, 11: 121, 12: 48, 13: 117, 14: 82, 15: 95, 16: 109, 17: 51, 18: 53,
@@ -595,7 +545,6 @@ This then spat out:
 ```
 
 Which strings together:
-
 ```sh
 DUCTF{112499910710851951214811784951095153535210351}
 ```
@@ -622,7 +571,6 @@ Also, Dean really, really liked looking up information about [Clive Palmer and T
 The way to decode this `.wav` file was not by treating it as audio, but thinking of it as visual instead. The official writeup pointed us to [Slow-scan television](https://www.wikiwand.com/en/Slow-scan_television), where audio could transmit images.
 
 Using [Blackcat SSTV](https://www.blackcatsystems.com/software/sstv.html), a tool linked in the writeup, we were then able to recreate this beautiful image:
-
 ![(Presumably) Clive Palmer poses with a thumbsup in front of a map of Australia coloured with the Australian flag. He stands next to text, "Make AUSTRALIA GREAT!!" where "Great" is also underlined, with a huge checkmark underneath that is left of his thumbsup. In the top left corner, a flag looking thing.](/img/ductf-2020/tim-tams-clive.jpg)
 
 Which, of course, does not have the real flag written in it. Taking the text at the top left corner `QHPGS{UHZOYR_Z3Z3_1BEQ}`, and running it through a ROT13 decoder, we get our *actual* flag.
@@ -637,7 +585,6 @@ Which is really, really fitting.
 *Joe is aiming to become the next supreme coder by trying to make his code smaller and smaller. His most recent project is a simple calculator which he reckons is super secure because of the "filters" he has in place. However, he thinks that he knows more than everyone around him. Put Joe in his place and grab the flag.*
 
 Navigating to the page given shows a calculator, as described:
-
 ![Text: "My mega calculator can do any calculations python will let you do. Use * + / % to do complex problems if you want." Below: an input field labelled "Calculation" with a button "Calculate for me". Under that, "Enter data and the results will be shown here!"](/img/ductf-2020/addition-home.png)
 
 We tried a few things at first, like causing an error:
@@ -647,25 +594,21 @@ Or entering in a calculation that results in 0:
 ![The page looks exactly the same as the initial shot, except with "1-1" inside the text field.](/img/ductf-2020/addition-zero.png)
 
 But after doing more research into the `eval()` function in Python - which was most likely doing this calculation work, we realised that it could probably be used to run some shellcode (ish). So we decided to use the `subprocess` module, which allows you to run shell code in Python.
-
 ```python
 __import__('subprocess').getoutput('ls')
 ```
 
 Then gave us this:
-
 ```sh
 __pycache__ main.py prestart.sh templates test.txt
 ```
 
 Then, printing out `main.py` via 
-
 ```python
 __import__('subprocess').getoutput('cat main.py')
 ```
 
 Printed out the whole script: 
-
 ![The entire main.py script that powers the site. A notable variable is "maybe_this_maybe_not", whose value is the flag.](/img/ductf-2020/addition-cracked.png)
 
 Which shows the flag.
@@ -681,20 +624,17 @@ NO DUCTF{} required*
 
 Upon first listen, it seemed like the audio file was morse code with some severe distortions. Dean later described it as "bass-boosted peaky audio", which is basically the same thing with fancier words.
 
-On our first attempts, we tried to transcribe the morse code without manipulating the file, but this was seriously tedious and draining.
+On our first attempts, we tried to transcribe the morse code without manipulating the file, but this was seriously tedious and draining. (The exact words I used were "joyce is really not that patient".)
 
 *Fun fact*: The distorted song in the audio file is [Give Me a Home Among the Gumtrees](https://www.youtube.com/watch?v=MLWzPQmd5sc).
 
 A few attempts later, Dean ported the file into [Audacity](https://www.audacityteam.org/) (our old friend!) and noticed the 600Hz tone (the morse code beep) was really prominent, and equalized the audio so that that tone could be isolated.
-
 ![A graph with a large bar at 600Hz, outlined in blue.](/img/ductf-2020/koala-equalization.png)
 
 Then it was just a matter of reading morse from this mess.
-
 ![Two waveforms of audio](/img/ductf-2020/koala-final.png)
 
-Which still took a while. Don't get me wrong. But we ended up with this:
-
+Which still took a while. Don't get me wrong. (My friends are more patient than I.) But we ended up with this:
 ```sh
 -.-. .- .-. .- -- . .-.. .-.. --- / -.- --- .- .-.. .- ... / 
 .- .-. . / - .... . / -... . ... - / -.- --- .- .-.. .- ...
@@ -704,6 +644,8 @@ Which, when translated from morse code, gave us the flag.
 
 **Flag**: CARAMELLO KOALAS ARE THE BEST KOALAS  
 **Tools**: [Audacity](https://www.audacityteam.org/), [morse code decoder](https://gchq.github.io/CyberChef/#recipe=From_Morse_Code('Space','Forward%20slash'))
+
+*Fun fact*: Caramello koalas are actually [*chocolates*](https://www.wikiwand.com/en/Caramello_Koala)! They're koala chocolates with caramel on the inside. Now I want some. They're [$20+ on Amazon.ca](https://www.amazon.ca/Cadbury-Caramel-Koala-240g/dp/B002X0QG58) though ...
 
 # Pwn
 ## Shell this!
@@ -719,7 +661,7 @@ However, beyond this we didn't really know what to do.
 
 *Post-CTF*: The last step we were missing was to actually get the memory address for `get_shell()`. Looking at the official writeup, it looks like we can use the `pwn` Python module with the `ELF()` object and `p64()` function to get the address of the `get_shell` function and insert it into our string, getting a shell.
 
-This was pretty interesting, as all three of us had encountered buffer overflows in some capacity from our assignments, but only in C. We remembered enough to brute force, but for the actual shell-code insertion, we were a little lost. It was also cool to see the use of `pwn` in Python - it definitely seems like a useful module.
+This was pretty interesting, as two of us had encountered buffer overflows in some capacity from our assignments, but only in C. We remembered enough to brute force, but for the actual shell-code insertion, we were a little lost. It was also cool to see the use of `pwn` in Python - it definitely seems like a useful module.
 
 **Flag**: DUCTF{h0w_d1d_you_c4LL_That_funCT10n?!?!?}  
 **Tools**: [`pwn`](https://github.com/Gallopsled/pwntools)  
@@ -774,7 +716,7 @@ which we saw repeated when we tried running `ltrace`, except there was some garb
 **Further reading**: [How does `ltrace` work?](https://blog.packagecloud.io/eng/2016/03/14/how-does-ltrace-work/), [10 ways to analyse binaries](https://opensource.com/article/20/4/linux-binary-analysis)
 
 ## I'm getting Emotional
-**Difficulty**: Medium
+**Difficulty**: Medium  
 *Bob received a very important email regarding some very important information. Can you figure out what's inside?*
 
 *Note: the document is based on a real emotet maldoc sample! The malicious bits have been removed, but this is what real world phishing docs look like...*
@@ -802,11 +744,10 @@ Hitting the buttons only gives a response code "200", but nothing else. We wante
 *Post-CTF*: Looking at the official write-up for this situation, I'm not actually sure we would've gotten there even if we *had* `adb` properly installed. They used [`apktool`](https://ibotpeaches.github.io/Apktool/) to decode and rebuild the APK ater patching it - we didn't even know this existed. We also had no idea what certificate pinning was or how to setup a MITM proxy.
 
 **Flag**: DUCTF{n0t_s0_s3cre7_4ft3r_4LL_!!11!}  
-**Tools**: [`apktool`](https://ibotpeaches.github.io/Apktool/), [`adb`](https://developer.android.com/studio/command-line/adb)  
-**Further reading**: [Certificate pinning](https://labs.nettitude.com/tutorials/tls-certificate-pinning-101/), [`mitmproxy`](https://mitmproxy.org/)
+**Tools** : [`apktool`](https://ibotpeaches.github.io/Apktool/), [`adb`](https://developer.android.com/studio/command-line/adb)  
+**Further reading** : [Certificate pinning](https://labs.nettitude.com/tutorials/tls-certificate-pinning-101/), [`mitmproxy`](https://mitmproxy.org/)
 
 # Conclusion
-
 Overall, our team ended up in 162nd place (out of 1080 teams), with 1958 points! (Many of the challenges featured dynamic scoring, meaning that the number of points went down as more people solved them.) 
 ![Team score screenshot. same_tho with 730 points; rujube with 462; Sandamander with 766.](/img/ductf-2020/ductf-final.png)
 
