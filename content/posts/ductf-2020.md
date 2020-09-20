@@ -1,5 +1,5 @@
 ---
-title: "Partial Writeup: Down Under CTF 2020"
+title: "Writeup: Down Under CTF 2020"
 date: 2020-09-19T09:28:04-04:00
 categories:
 - writeup
