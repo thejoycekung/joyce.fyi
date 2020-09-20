@@ -11,7 +11,7 @@ draft: true
 
 This past weekend, my friends and I had the chance to participate in [Down Under CTF](https://downunderctf.com/) 2020, a CTF aimed at Australian secondary- and tertiary-school students. Though our team didn't come anywhere close to placing, or even completing all the challenges, we had a fun time and learned some new techniques for our next CTF.
 
-This writeup is a team effort by me, Dean Jiao, and Ruju Jambusaria, and was written while we were solving challenges. It is *not* an exhaustive writeup (please consult [the organizers' writeup](https://github.com/DownUnderCTF/Challenges_2020_public) for a full writeup). Instead, this writeup is a collaborative effort in exploring dead ends, throwing ideas on the wall, and seeing what sticks. 
+This writeup is a team effort by me, [Dean Jiao](https://twitter.com/deanjiao), and [Ruju Jambusaria](http://github.com/rujuj), and was written while we were solving challenges. It is *not* an exhaustive writeup (please consult [the organizers' writeup](https://github.com/DownUnderCTF/Challenges_2020_public) for a full writeup). Instead, this writeup is a collaborative effort in exploring dead ends, throwing ideas on the wall, and seeing what sticks. 
 
 Challenges we made a decent attempt at completing (or successfully solved) are therefore included below; other challenges are not.
 
@@ -19,7 +19,7 @@ Challenges we made a decent attempt at completing (or successfully solved) are t
 
 Down Under CTF 2020 ran from Friday, September 18 5AM EDT to Sunday, September 20 5AM EDT (7PM Australian Eastern Time). There were [over 3000 participants](https://twitter.com/DownUnderCTF/status/1307651854134734848), and over 1000 teams on the scoreboard.
 
-Our team was called "why not make team" (... this is a long story), and consisted of me, Dean Jiao, and Ruju Jambusaria. If you're curious about how we did overall, you can checkout [our team stats](#conclusion) near the end.
+Our team was called "why not make team" (... this is a long story), and consisted of me, Dean, and Ruju. If you're curious about how we did overall, you can checkout [our team stats](#conclusion) near the end.
 
 There were seven challenge categories, with difficulties ranging from "sanity check" to "insane".
 1. [OSInt](#osint)
