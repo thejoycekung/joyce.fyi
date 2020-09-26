@@ -1,7 +1,7 @@
 ---
 title: "Linux Upskill Challenge: Setting up on Google Cloud Platform"
 categories: 
-- writeup
+- tutorial
 tags:
 - linux
 - gcp
