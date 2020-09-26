@@ -32,6 +32,15 @@
                     "issue_num": 1,
                     "issue_name": "Vol 2 - Renga",
                     "is_forthcoming": false
+                },
+                {
+                    "name": "Mussel",
+                    "genre": "poetry",
+                    "publication": "Finished Creatures Poetry Magazine",
+                    "publication_url": "https://finishedcreatures.co.uk/",
+                    "issue_num": 4,
+                    "issue_name": "Stranger",
+                    "is_forthcoming": true
                 }
             ]
         },
