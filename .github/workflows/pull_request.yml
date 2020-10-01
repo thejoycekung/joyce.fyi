@@ -1,6 +1,5 @@
 name: Deploy pull requests to Netlify
 on:
-  push:
   pull_request:
     types: [opened, synchronize]
 jobs:
