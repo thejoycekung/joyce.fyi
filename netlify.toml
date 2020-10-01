@@ -1,5 +1,7 @@
-[context.deploy-preview]
+[build.environment]
   HUGO_VERSION = "0.74.3"
+
+[context.deploy-preview]
   command = "hugo -b $DEPLOY_PRIME_URL"
   publish = "public/"
 
