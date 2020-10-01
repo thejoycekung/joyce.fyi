@@ -38,3 +38,5 @@ I'm using 3 actions (available on marketplace) for this:
 3. `nwtgck/actions-netlify@v1.1`
 
 First, we'll checkout the repo using `actions/checkout@v2`. Then, we'll install Hugo using `peaceiris/actions-hugo@v2`. Then, we'll run `hugo` and build the site. Finally, we'll deploy the `public` directory to Netlify using `nwtgck/actions-netlify@v1.1`.
+
+And the real question is: do I even need any of this?
