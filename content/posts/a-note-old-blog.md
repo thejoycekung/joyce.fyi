@@ -1,7 +1,9 @@
 ---
 title: A note on my former blog
 date: 2020-08-12T03:16:47+0400
-category: misc
+categories:
+- misc
+- meta
 summary: Moving to more technical content.
 ---
 
