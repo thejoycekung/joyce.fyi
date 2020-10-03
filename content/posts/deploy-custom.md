@@ -87,9 +87,13 @@ Or I could abandon Netlify altogether. And go back to my Docker idea, or find ot
 
 # ~~Creating~~ ~~Scrapping~~ Fixing my Netlify ~~Actions~~ Workflow
 
-In the end, I decided to add extra configurations to how pull requests are built. I created a `netlify.toml` file to the root of my published site (i.e. in the /static folder of my source code) and added a few lines to configure my pull requests:
+In the end, I decided to add extra configurations to how pull requests are built. I created a `netlify.toml` file to the root of my repo and added a few lines to configure my pull requests:
 
 ```toml
+[build]
+HUGO_VERSION = "0.74.3"
+# Netlify's Hugo version is lower, causing trouble with taxonomyTerms
+
 [context.deploy-preview]
 command = "hugo -b $DEPLOY_PRIME_URL"
 publish = "public/"
@@ -97,7 +101,7 @@ publish = "public/"
 
 This way, I didn't need a separate Action to install & run Hugo to build my site. In fact, I could get rid of that workflow completely and just *trust* Netlify to work. 
 
-And since I was relying on Netlify for my pull requests, I figured I might as well use Netlify for the hosting of my actual site as well. Remembering how easy it was to hook it up the first time I did it, I went back and moved my setup (*again*, I know) to Netlify once more. I even configured my `netlify.toml` file to redirect from `joycekung.netlify.app` to my new domain:
+And since I was relying on Netlify for my pull requests, I figured I might as well use Netlify for the hosting of my actual site as well. Remembering how easy it was to hook it up the first time I did it, I went back and moved my setup (*again*, I know) to Netlify once more. I even configured a `netlify.toml` file for the root of my published site[^two] to redirect from `joycekung.netlify.app` to my new domain:
 
 ```toml
 [[redirects]]
@@ -106,6 +110,8 @@ to = "https://joyce.fyi"
 status = 301
 force = true
 ```
+
+[^two]: If you noticed carefully, this means I have *two* `netlify.toml` files hanging around my repo now. One of them lives in the root of my source code, so Netlify properly builds my deploy previews. The other lives in the root of my published directory, so that Netlify properly redirects the `netlify.app` URL to my custom domain. This is obviously not ideal, but for now, I'm too tired to try and un-fuck it.
 
 # Conclusion
 Now, whenever I want to make a new post (and have it vetted), it can go through this process:
