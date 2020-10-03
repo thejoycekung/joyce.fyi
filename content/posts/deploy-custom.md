@@ -1,9 +1,8 @@
----
-title: "Abandoning Github Pages for Netlify (ii)"
-date: 2020-09-26T11:26:58-04:00
-categories:
-- meta
----
++++
+title = "Abandoning Github Pages for Netlify (ii)"
+date = 2020-10-03
+categories = ["meta"]
++++
 
 In the [first part of this post](/posts/custom-domain), I discussed getting and setting up a custom domain for this site (and all its various challenges).  
 In this post, I'll be talking about how I abandoned all that hard work just to go back to Netlify.

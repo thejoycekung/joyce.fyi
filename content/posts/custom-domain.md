@@ -1,11 +1,9 @@
----
-title: "Custom Domains on Github Pages Are Hard (i)"
-date: 2020-09-20T12:27:35-04:00
-categories:
-- meta
-tags:
-- it's always dns
----
++++
+title = "Custom Domains on Github Pages Are Hard (i)"
+date = 2020-10-02
+categories = ["meta"]
+tags = ["it's always dns"]
++++
 
 I've been using my [Hugo setup](/posts/a-note-old-blog/) for just over a month now (and really enjoying it!), but I've made a few changes to this blog that I think are going to make things even better:
 
