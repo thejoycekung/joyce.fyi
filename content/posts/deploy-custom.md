@@ -58,14 +58,14 @@ With that Action in mind, I started thinking about what I needed to make this wo
 - [ ] Finally, I needed an actual workflow in YAML so that it would actually run on a branch I set up.
 
 So this is the workflow that I actually came up with:
-1. `actions/checkout@v2`
-2. `peaceiris/actions-hugo@v2`
+1. [`actions/checkout@v2`](https://github.com/marketplace/actions/checkout)
+2. [`peaceiris/actions-hugo@v2`](https://github.com/marketplace/actions/hugo-setup)
 3. `hugo` (shell step - not an Action)
-4. `nwtgck/actions-netlify@v1.1`
+4. [`nwtgck/actions-netlify@v1.1`](https://github.com/marketplace/actions/netlify-actions)
 
 Essentially, first, we'll checkout the repo using `actions/checkout@v2`. Then, we'll install Hugo using `peaceiris/actions-hugo@v2`. Then, we'll run `hugo` as a shell step and build the site. Finally, we'll deploy the `public` directory to Netlify using `nwtgck/actions-netlify@v1.1`.
 
-In order to test this all out, I made a branch (with a draft of this current post, actually!) and pushed it, creating a pull request and therefore triggering the workflow.
+In order to test this all out, I put that all into a YAML file on `master`, made a branch (with a draft of this current post, actually!) and pushed it, creating a pull request and therefore triggering the workflow.
 
 And ... then it failed. 
 

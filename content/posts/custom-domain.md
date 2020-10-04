@@ -112,7 +112,7 @@ And that ... also worked. After encountering so much friction with Github Pages,
 But obviously that wasn't the end of it.
 
 # Easy Domain Setup with ~~Github Pages~~ ~~Netlify~~ Github Pages
-I know, I know. I had a working setup. Why go back to Github Pages? Just burn the whole thing and move to Netlify. [^netlify]
+I know, I know. I had a working setup. Why go back to Github Pages? Just burn the whole thing and move to Netlify.[^netlify]
 
 [^netlify]: Okay, I actually did end up doing this, but that comes later in part 2.
 
@@ -121,7 +121,7 @@ Github Support actually responded to me around 12 hours after I filed my ticket,
 
 A little odd that they can just `free it up` like that. With their `admin tools`.
 
-But no matter. I was a woman on a mission to have `thejoycekung.github.io` redirect to `joyce.fyi`[^redirect], and my Netlify site was just a temporary diversion. I switched my `A` and `CNAME` records to point to Github again.
+But no matter. I was a woman on a mission to have `thejoycekung.github.io` redirect to `joyce.fyi`,[^redirect] and my Netlify site was just a temporary diversion. I switched my `A` and `CNAME` records to point to Github again.
 
 [^redirect]: Another reason why I valued my redirect was because I still had links to `thejoycekung.github.io` on some job-related stuff, I'm sure, somewhere ...
 
@@ -137,4 +137,4 @@ And with that ... entering the `CNAME` on the Github UI finally didn't error out
 
 And finally, after at least 15 hours of "what on earth is going on", my site was being properly hosted from Github Pages using my new domain `joyce.fyi`.
 
-Of course, I had to go and change that again in the coming weeks. But that's in Part 2.
+Of course, I had to go and change that again in the coming weeks. But [that's in Part 2](/posts/deploy-custom).
