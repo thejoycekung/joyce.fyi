@@ -14,4 +14,5 @@ jobs:
       uses: chabad360/hugo-gh-pages@v1.2
       with:
           githubToken: ${{ secrets.PERSONAL_TOKEN }}
+          branch: publish
           
