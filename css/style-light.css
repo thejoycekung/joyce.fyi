@@ -1495,7 +1495,7 @@ article .content .caption {
   content: ")";
 }
 pre {
-  overflow-x: auto;
+  overflow-x: noscroll;
   padding: 10px 15px;
   padding-bottom: 0;
   border: 1px dotted #666;
@@ -1504,6 +1504,8 @@ pre {
   font-family: "JetBrains Mono", monospace;
   line-height: 22px;
   -webkit-border-radius: 4px;
+  white-space: pre-wrap;
+  word-break: break-word;
 }
 pre code {
   display: block;
@@ -1517,13 +1519,15 @@ code {
   -webkit-border-radius: 2px;
 }
 .highlight {
-  overflow-x: auto;
+  overflow-x: noscroll;
   margin: 1rem 0;
   padding: 10px 15px;
   border-radius: 4px;
   background: #282a36;
   font-family: "JetBrains Mono", monospace;
   -webkit-border-radius: 4px;
+  white-space: pre-wrap;
+  word-break: break-word;
 }
 .highlight figcaption {
   margin: -5px 0 5px;
