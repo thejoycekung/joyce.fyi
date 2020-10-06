@@ -73,7 +73,7 @@ Since the challenge mentioned "signature shade of blue", I figured it had someth
 # Crypto World
 This was one of my favourite areas of the CTF. You were essentially led to a page where you could embark on a text-based adventure, à là "You are in a room with a puzzle. There are three doors leading to your N/S/W". Granted the flavourtext was much more well-written than that, but you get the gist.
 
-This area focused primarily on math problems. It was super fun to me _not_ because I actually wanted to solve any of these math problems, but because it really showed me the limits of calculators (even if they called themselves "big number" calculators).
+This area focused primarily on math problems. When you provided the correct answer, the correct flag was then printed out. This area was super fun for me _not_ because I actually wanted to solve any of these math problems, but because it really showed me the limits of calculators (even if they called themselves "big number" calculators).
 
 There were 10 challenge areas, with 3 levels in each area. I solved levels in 7 challenge areas, but only managed to successfully complete 1.
 
