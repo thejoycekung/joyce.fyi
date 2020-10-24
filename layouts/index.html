@@ -77,7 +77,7 @@
             <span class="h1"><a href="{{ .Site.Params.projectsUrl | absURL }}">Recent Literary Publications</a></span>
             <ul class="project-list">
                 {{ range first 1 .Site.Data.projects.list }}
-                    {{ range first 5 (sort .pubs "name" "asc") }}
+                    {{ range first 5 (sort (where .pubs "is_forthcoming" false) "name" "asc") }}
                         {{ partial "poem.html" . }}
                     {{ end }}
                 {{ end }}
