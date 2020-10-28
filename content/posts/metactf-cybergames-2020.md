@@ -40,7 +40,9 @@ void vuln() {
 }
 ```
 
-So, all we have to do is enter in enough garbage (> 48 characters[^bb0]) so that the buffer will overflow and cause a segmentation fault. Then, the system will just print out the flag.
+Notice how the access code isn't checked at all, and `isAuthenticated` is never modified. We want `isAuthenticated` to be any value *other* than 0, so that it will register as `true`.
+
+So, we can modify `isAuthenticated` by overflowing the buffer (by entering > 48 characters[^bb0]), which will then print out the flag and cause a segmentation fault.
 
 [^bb0]: *Post-CTF*: I tested it out after, and the exact number was 64 characters. 64-48 = 16. I don't actually know why 64. Something about stack frames?
 
@@ -157,7 +159,7 @@ Write-host "The flag is in the encoded payload"; $qq = "MetaCTF{peeling_back_the
 I originally wanted to try using `john` for this challenge, but I had some trouble using the `zip2john` tool to get the password hash from the zipfile.
 
 Instead, I found an online tool for [zip file password removal](https://passwordrecovery.io/zip-file-password-removal/).[^zip] Running the zip file through this tool gave the password `Soldat*13`, which then gave us this picture of a flag:
-![](/img/metactf-2020/planet.png)
+![Black, handwritten text on a white background. Looks a little bit like it was written while the user was using a mouse. Text has the flag.](/img/metactf-2020/planet.png)
 
 [^zip]: Which didn't seem sketchy at **all**.
 
@@ -199,7 +201,7 @@ Since this was an Office file, we tried finding a tool to analyse Office macros,
   [...]
 ```
 
-According to that post about `oledump`, the `M` on line 14 indicates that a VBA macro was detected. If we run `oledump` with the option `-sf 14`, we can dig into the 10th file.
+According to that post about `oledump`, the `M` on line 14 indicates that a VBA macro was detected. If we run `oledump` with the option `-sf 14`, we can dig into the 14th file.
 ```sh
 > py oledump_V0_0_54/oledump.py Publish3r/Publish3r.pub
 ...
@@ -238,7 +240,7 @@ Summing the port numbers together, we get:
 
 We're given a PDF where the code is covered by a black box. It appears to be a scanned PDF, so we can't highlight any of the text (and potentially the text underneath the box).
 
-![](/img/metactf-2020/memo.png)
+![Black text on white background: "Upon request, we have reset your backup Two-Factor Authentication code. Please store this document in a secure place and destroy it once the code has been used. CODE: [black box]"](/img/metactf-2020/memo.png)
 
 However, if we open the PDF in Adobe Acrobat Reader and try to edit it, it'll immediately remove the box and show the flag.
 
@@ -414,7 +416,7 @@ Putting it all together, we finally get the flag.
 > How many unique emails were exposed in the biggest single collection of breached usernames/passwords? Provide the answer (flag) in the format MetaCTF{number}
 
 There's a site called [Have I Been Pwned](https://haveibeenpwned.com), where you can enter your email to see if your information has ever been breached. They also conveniently keep a list of the largest data breaches ever:
-![](/img/metactf-2020/breaches.png)
+![List of largest data breaches: at the top is 772,904,991 for Collection #1 accounts](/img/metactf-2020/breaches.png)
 
 **Flag**: `MetaCTF{772,904,991}`  
 **Further reading**: [Have I Been Pwned](https://haveibeenpwned.com), 
@@ -463,10 +465,10 @@ Searching for Casyn in Hammond, Indiana gave us his [LinkedIn](https://www.linke
 
 ⭐ This was Dean's favourite challenge!
 
-Now that we had Casyn's first name and LinkedIn, we also got access to his [personal website](https://veddercasyn.me/). This also listed his Github profile, and we noticed that his personal website was also hosted on Github.
+Now that we had Casyn's first name and LinkedIn, we also got access to his [personal website](https://veddercasyn.me/). This also listed [his Github profile](https://github.com/veddercasyn), and we noticed that his personal website was also [hosted on Github](https://github.com/veddercasyn/veddercasyn.github.io).
 
 Looking through each commit individually, Dean found [a commit where Casyn's number was visible](https://github.com/veddercasyn/veddercasyn.github.io/commit/9257913):
-![](/img/metactf-2020/commits.png)
+![Commit 957913: Red line is removed, where he removed his phone number written out as words.](/img/metactf-2020/commits.png)
 
 **Flag**: 929-249-4018
 
@@ -480,7 +482,7 @@ On Casyn's website, he has a photo of a place called "Theo's", with a caption "I
 However, looking through his commit history, Casyn has [a commit that shows he *used* to have a different picture there](https://github.com/veddercasyn/veddercasyn.github.io/commit/54ef2b15a962db18a5a13512dc97e1b79c5280d6) with the caption "Love spending time here!".
 
 Going to that Imgur link shows this photo:
-![](https://i.imgur.com/uTHNQT2.png)
+![Sun flares on the right. There's a parking lot with cars, a tower somewhere in the background, and a tree in the foreground. The main focus is a large reddish building with six windows.](https://i.imgur.com/uTHNQT2.png)
 
 This gives us a few pieces of information:
 - There's a tower close by
@@ -497,7 +499,7 @@ After a lot of searching, we weren't really getting anywhere. We went back to th
 
 [Turns out there's only one](https://www.google.com/maps/@41.6177775,-87.5146411,3a,54.7y,232.99h,96.47t/data=!3m6!1e1!3m4!1sh2dAifryR801qCzDTbgO6A!2e0!7i16384!8i8192)! And it has reddish brick, and a sloped roof, and is next to a parking lot ...
 
-![](/img/metactf-2020/streetview.png)
+![Aerial view of Hammond Public Library, that has the address and information in a sidebar.](/img/metactf-2020/streetview.png)
 
 Thankfully, Google Maps gave us the full address, which was the flag.
 
@@ -508,24 +510,24 @@ Thankfully, Google Maps gave us the full address, which was the flag.
 > I need to publish a big story today before TMZ steals my scoop, however I can't find my way back into the admin panel. Can you please help me out by finding my password so I can get back to work?
 
 Clicking the site linked takes you to a page with only this on it: 
-![](/img/metactf-2020/login.png)
+![Katy Perry Fan Club Admin Login. On the right there is a photo of Katy Perry, while on the left there is a Username and Password field, with a blue Submit button.](/img/metactf-2020/login.png)
 
 Opening up dev tools and going to the Debugger panel (the Sources panel on Chrome) gives us this: 
-![](/img/metactf-2020/debugger.png)
+![Screenshot of a JS snippet. There is a `if` statement that checks the password, which is the flag.](/img/metactf-2020/debugger.png)
 
 **Flag**: `MetaCTF{So_You_Wanna_Play_With_Magic}`  
 **Tools**: Browser dev tools  
 **Bonus**: You can either enter the credentials `ChrisM` and `MetaCTF{So_You_Wanna_Play_With_Magic}` to get to the Admin Panel *or* you can just nagivate to `/adminpanel.html`
 
 The Admin Panel: 
-![](/img/metactf-2020/admin.png)
+![Katy Perry Official Fanbase 2.0. There are four posts: KP Doin' Her Thang, Why We H8 Taylor Swift, Out Here Vibin', and Why KP is the Best.](/img/metactf-2020/admin.png)
 
 ## Barry's Web Application
 > I've made this cool new web application that I plan to use to host a blog. Please check it out at http://host1.metaproblems.com:5620/ Right now it's still currently being built, but I hope you enjoy what's there so far!
 
 Clicking on this URL redirects you to the page `/dev/webapp/index.html`. If we modify the URL to go to `http://host1.metaproblems.com:5620/dev` instead, we can actually see the directory tree for this site:
 
-![](/img/metactf-2020/directory.png)
+![Directory tree that contains two folders, docs and webapp.](/img/metactf-2020/directory.png)
 
 Clicking on the `docs` folder will then show a file called `flag.txt`, which is where our flag is stored.
 
@@ -534,11 +536,11 @@ Clicking on the `docs` folder will then show a file called `flag.txt`, which is 
 > Cookies are used by websites to keep track of user sessions and help with authentication. Can you spot the issue with this site and convince it that you're authenticated?
 
 We're taken to this site:
-![](/img/metactf-2020/cookie.png)
+![An input field with label "Enter the secret code" and a Submit button to the right. Above, a red banner that says "You are not authenticated. Please enter the secret code to log in."](/img/metactf-2020/cookie.png)
 
 If you try and submit something, you'll be told that you have the incorrect code. However, if you look in the Network tab of Chrome dev tools, you'll see we have a response cookie called `cm-authenticated` with a value of 0.
 
-![](/img/metactf-2020/cookie-dev.png)
+![Table of response cookies, showing cm-authenticated with a value of 0](/img/metactf-2020/cookie-dev.png)
 
 We can then go to Application > Storage > Cookies, and then modify the value of that cookie to be 1 instead. Refreshing the page will show the flag.
 
@@ -559,7 +561,7 @@ He also used it to create a spectrogram with the left and right channels:
 ```sh
 $ sox sound-difference.wav -n spectrogram -o sound-difference.png
 ```
-![](/img/metactf-2020/spectrogram.png)
+![Spectrogram that shows the audio in left and right channels, with purples, reds, oranges, and yellows.](/img/metactf-2020/spectrogram.png)
 
 Listening to the audio then revealed an automated voice spelling out the flag.
 
@@ -576,7 +578,7 @@ F^mY;L?t24Zk.m^-hnWl,[l)[ku
 **Hint:** White to play, and you only need one move to win.
 
 Inside the zip file, we are given 9 images, which are all chessboards:
-![](/img/metactf-2020/chessboard.png)
+![Chessboard. Black King is H8, and white Queen can move to H7 for checkmate.](/img/metactf-2020/chessboard.png)
 
 We figured out the moves for the board and put them in chess notation: 
 ```sh
@@ -618,7 +620,7 @@ Putting that all together will then give us the flag.
 Though over 1500 teams signed up, just under a thousand actually scored points. Out of those teams, our team placed 106th overall and 70th in the student category, scoring 5050 points.
 
 Other fun stats:
-- We did not solve any challenge above 300pts *except* for the Mr Casyn ones.
+- We did not solve any challenge above 300pts *except* for the Mr. Casyn ones
 - We only solved *one* reverse engineering challenge
 - We solved all of the reconnaisance challenges *except* for "Complete Transparency", which involved looking for a subdomain
 
