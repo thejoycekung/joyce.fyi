@@ -47,4 +47,4 @@ And along that same vein, my taste might not always mesh with that of our submit
 
 Those pieces that really resonate with me, though ... \*chef's kiss\*.
 
-[Stone of Madness Press](https://stoneofmadnesspress.com/) *is open for submissions from queer, trans, and neurodiverse writers until November 15. You can view our submission guidelines [here](https://stoneofmadnesspress.com/submit).*
+[Stone of Madness Press](https://stoneofmadnesspress.com/) *is open for submissions from queer, trans, and neurodiverse writers for the first half of every month. Currently, we are reading until November 15 for Issue 6. You can view our submission guidelines [here](https://stoneofmadnesspress.com/submit).*
