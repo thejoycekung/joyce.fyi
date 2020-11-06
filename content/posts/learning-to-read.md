@@ -45,6 +45,6 @@ I suppose this is my impostor syndrome rearing its ugly head again. Being ~~fort
 
 And along that same vein, my taste might not always mesh with that of our submitters. I know, personally, I fret over every piece I send in, and I try to make it the best I can. I'm sure many of our submitters do the same. Their words tug at their heartstrings, and each piece is a special work to them. But sometimes it doesn't do anything for me.
 
-Those pieces that really resonate with me, though ... \*chef's kiss\*.
+When I find a piece that really resonates with me, though ... \*chef's kiss\*.
 
 [Stone of Madness Press](https://stoneofmadnesspress.com/) *is open for submissions from queer, trans, and neurodiverse writers for the first half of every month. Currently, we are reading until November 15 for Issue 6. You can view our submission guidelines [here](https://stoneofmadnesspress.com/submit).*
