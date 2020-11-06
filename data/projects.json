@@ -41,6 +41,13 @@
                     "issue_num": 4,
                     "issue_name": "Stranger",
                     "is_forthcoming": true
+                },
+                {
+                    "name": "Furball",
+                    "genre": "creative non-fiction",
+                    "publication": "The Daily Drunk",
+                    "publication_url": "https://thedailydrunk.com/f/furball",
+                    "is_forthcoming": false
                 }
             ]
         },
