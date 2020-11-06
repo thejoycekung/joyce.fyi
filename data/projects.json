@@ -45,8 +45,9 @@
                 {
                     "name": "Furball",
                     "genre": "creative non-fiction",
+                    "url": "https://thedailydrunk.com/f/furball",
                     "publication": "The Daily Drunk",
-                    "publication_url": "https://thedailydrunk.com/f/furball",
+                    "publication_url": "https://thedailydrunk.com",
                     "is_forthcoming": false
                 }
             ]
