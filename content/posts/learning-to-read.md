@@ -3,7 +3,7 @@ title = "On Learning to Read (Literary Writing)"
 date = 2020-11-06T15:02:54-05:00
 +++
 
-I'm a few days into my first gig as a reader in the Stone of Madness masthead,[^exp] and I feel I need to learn how to read literary writing better.
+I'm a few days into my first gig as a reader in the Stone of Madness masthead, and I feel I need to learn how to read literary writing better.
 
 In my circle of friends (primarily techies who have interests in some form of art), I'm the "English"/"literary"[^art] friend. I like reading, and I like poetry specifically.
 
