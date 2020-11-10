@@ -7,7 +7,7 @@
                     "name": "just peachy",
                     "genre": "poetry",
                     "url": "https://www.perhappened.com/justpeachyjoycekung.html",
-                    "publication": "Perhappened Magazine",
+                    "publication": "perhappened mag",
                     "publication_url": "https://www.perhappened.com",
                     "issue_num": 3,
                     "issue_name": "HEATWAVE",
@@ -49,6 +49,14 @@
                     "publication": "The Daily Drunk",
                     "publication_url": "https://thedailydrunk.com",
                     "is_forthcoming": false
+                },
+                {
+                    "name": "💭💕",
+                    "genre": "poetry",
+                    "publication": "the minison zine",
+                    "publication_url": "https://theminisonproject.wordpress.com/",
+                    "issue_num": 4,
+                    "is_forthcoming": true
                 }
             ]
         },
