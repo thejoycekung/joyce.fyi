@@ -3,7 +3,6 @@
         {{ if isset .Site.Params "description" }}
             {{ .Site.Params.description }}
         {{ end }}
-        <p>P.S.: I'm <a target="_blank" href="/posts/new-grad-jobs">looking for work</a>. </p>
         {{ if isset .Site.Params "social" }}
             <p>
                 {{ $length := (len .Site.Params.social) }}
@@ -50,7 +49,7 @@
 
         {{ else }}
             <ul class="post-list">
-                {{ .Scratch.Set "count" 5 }}
+                {{ .Scratch.Set "count" 7 }}
                 {{ if isset .Site.Params "postsonhomepage" }}
                     {{ .Scratch.Set "count" .Site.Params.postsOnHomePage }}
                 {{ end }}

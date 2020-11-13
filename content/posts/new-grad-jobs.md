@@ -5,6 +5,8 @@ categories:
 date: 2020-09-05T09:34:49-04:00
 ---
 
+**UPDATE** (2020-11-13): I am no longer looking for work! Happy to say that I accepted a position as a Site Reliability Engineer in Toronto working remotely for a company. May share more details about this as my start date looms closer (as it stands, we're about 7 months out), but haven't decided yet. Going to leave this post up for posterity's sake. Thanks to anyone who sent me an email about this over the last couple months!
+
 After four years of searching for internships, my time has finally come to look for a full-time job. 
 
 This is a "reverse job posting", where I'll be describing what I offer as a candidate, but focusing more on what I'm looking for in a company.
