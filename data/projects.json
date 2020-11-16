@@ -6,11 +6,21 @@
                 {
                     "name": "💭💕",
                     "year": 2020,
+                    "url": "https://theminisonproject.files.wordpress.com/2020/11/mz-issue-3.pdf",
                     "publication": "the minison zine",
-                    "publication_url": "https://theminisonproject.files.wordpress.com/2020/11/mz-issue-3.pdf",
+                    "publication_url": "https://theminisonproject.wordpress.com",
                     "issue_num": 3,
                     "is_forthcoming": false,
                     "is_feature": true
+                },
+                {
+                    "name": "a list of tiny intimacies my mind absolutely relishes now, in no particular order",
+                    "year": 2021,
+                    "publication": "Burning Jade Magazine",
+                    "publication_url": "https://www.burningjademagazine.org",
+                    "issue_num": 3,
+                    "issue_name": "#cuffingszn",
+                    "is_forthcoming": true
                 },
                 {
                     "name": "just peachy",
@@ -30,6 +40,15 @@
                     "publication_url": "https://finishedcreatures.co.uk/",
                     "issue_num": 4,
                     "issue_name": "Stranger",
+                    "is_forthcoming": true
+                },
+                {
+                    "name": "my love language is pouring you tea -",
+                    "year": 2021,
+                    "publication": "Burning Jade Magazine",
+                    "publication_url": "https://www.burningjademagazine.org",
+                    "issue_num": 3,
+                    "issue_name": "#cuffingszn",
                     "is_forthcoming": true
                 },
                 {
