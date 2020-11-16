@@ -1,9 +1,9 @@
 <li class="project-item">
-    {{ if .url }}
+    <em>{{ if .url }}
         <a href="{{ .url }}">{{ .name }}</a>,
     {{ else }}
         {{ .name }},
-    {{ end }}
+    {{ end }}</em>
     <a href="{{ .publication_url }}">{{ .publication }}</a>
     {{ if .issue_num }}
         Issue {{ .issue_num }}
@@ -12,7 +12,7 @@
         {{ end }}
     {{ end }}
     {{ if .is_forthcoming }}
-        <i>(forthcoming)</i>
+        <em>(forthcoming)</em>
     {{ else }}
         ({{ .year }})
     {{ end }}
