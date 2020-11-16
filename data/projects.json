@@ -1,31 +1,40 @@
 {
     "list": [
         {
-            "year": 2020,
+            "genre": "poetry",
             "pubs":[
                 {
+                    "name": "💭💕",
+                    "year": 2020,
+                    "publication": "the minison zine",
+                    "publication_url": "https://theminisonproject.files.wordpress.com/2020/11/mz-issue-3.pdf",
+                    "issue_num": 3,
+                    "is_forthcoming": false,
+                    "is_feature": true
+                },
+                {
                     "name": "just peachy",
-                    "genre": "poetry",
+                    "year": 2020,
                     "url": "https://www.perhappened.com/justpeachyjoycekung.html",
                     "publication": "perhappened mag",
                     "publication_url": "https://www.perhappened.com",
                     "issue_num": 3,
                     "issue_name": "HEATWAVE",
-                    "is_forthcoming": false
+                    "is_forthcoming": false,
+                    "is_feature": true
                 },
                 {
-                    "name": "this is diagonalization",
-                    "genre": "poetry",
-                    "url": "https://www.blurb.com/b/10263109-sin-16-vertex",
-                    "publication": "Sine Theta Magazine",
-                    "publication_url": "https://www.sinetheta.net",
-                    "issue_num": 16,
-                    "issue_name": "VERTEX 角",
-                    "is_forthcoming": false
+                    "name": "Mussel",
+                    "year": 2020,
+                    "publication": "Finished Creatures Poetry Magazine",
+                    "publication_url": "https://finishedcreatures.co.uk/",
+                    "issue_num": 4,
+                    "issue_name": "Stranger",
+                    "is_forthcoming": true
                 },
                 {
                     "name": "restless",
-                    "genre": "poetry",
+                    "year": 2020,
                     "url": "https://formidablewoman.org/issue-no-1-vol-2-spring-2020",
                     "publication": "fws: a journal of literature and art",
                     "publication_url": "https://formidablewoman.org/",
@@ -34,63 +43,58 @@
                     "is_forthcoming": false
                 },
                 {
-                    "name": "Mussel",
-                    "genre": "poetry",
-                    "publication": "Finished Creatures Poetry Magazine",
-                    "publication_url": "https://finishedcreatures.co.uk/",
-                    "issue_num": 4,
-                    "issue_name": "Stranger",
-                    "is_forthcoming": true
-                },
-                {
-                    "name": "Furball",
-                    "genre": "creative non-fiction",
-                    "url": "https://thedailydrunk.com/f/furball",
-                    "publication": "The Daily Drunk",
-                    "publication_url": "https://thedailydrunk.com",
-                    "is_forthcoming": false
-                },
-                {
-                    "name": "💭💕",
-                    "genre": "poetry",
-                    "publication": "the minison zine",
-                    "publication_url": "https://theminisonproject.files.wordpress.com/2020/11/mz-issue-3.pdf",
-                    "issue_num": 3,
-                    "is_forthcoming": true
+                    "name": "this is diagonalization",
+                    "year": 2020,
+                    "url": "https://www.blurb.com/b/10263109-sin-16-vertex",
+                    "publication": "Sine Theta Magazine",
+                    "publication_url": "https://www.sinetheta.net",
+                    "issue_num": 16,
+                    "issue_name": "VERTEX 角",
+                    "is_forthcoming": false,
+                    "is_feature": true
                 }
             ]
         },
         {
-            "year": 2015,
+            "genre": "creative non-fiction",
             "pubs": [
                 {
-                    "name": "So this is real. And this is Not Camp.",
-                    "genre": "creative non-fiction",
-                    "url": "https://medium.com/@thejoycekung/so-this-is-real-and-this-is-not-camp-cfac27c56862",
-                    "publication": "Medium (personal)",
-                    "publication_url": "https://medium.com/@thejoycekung",
+                    "name": "'Chat Tics': The Good, the Bad, the Ugly, and the 'Same'!",
+                    "year": 2015,
+                    "url": "https://medium.com/yuniversity-interns/chat-tics-the-good-the-bad-the-ugly-and-the-same-134aeadeb690",
+                    "publication": "YUNiversity Interns",
+                    "publication_url": "https://medium.com/yuniversity-interns/",
                     "is_forthcoming": false
                 },
                 {
+                    "name": "Furball",
+                    "year": 2020,
+                    "url": "https://thedailydrunk.com/f/furball",
+                    "publication": "The Daily Drunk",
+                    "publication_url": "https://thedailydrunk.com",
+                    "is_forthcoming": false,
+                    "is_feature": true
+                },
+                {
                     "name": "Decisions, Decisions ...",
-                    "genre": "creative non-fiction",
+                    "year": 2015,
                     "url": "https://medium.com/yuniversity-interns/decisions-decisions-9ca7683a2a82",
                     "publication": "YUNiversity Interns",
                     "publication_url": "https://medium.com/yuniversity-interns/",
                     "is_forthcoming": false
                 },
                 {
-                    "name": "Writer's Block",
-                    "genre": "creative non-fiction",
-                    "url": "https://medium.com/yuniversity-interns/writer-s-block-b81e25bfbb57",
-                    "publication": "YUNiversity Interns",
-                    "publication_url": "https://medium.com/yuniversity-interns/",
+                    "name": "So this is real. And this is Not Camp.",
+                    "year": 2015,
+                    "url": "https://medium.com/@thejoycekung/so-this-is-real-and-this-is-not-camp-cfac27c56862",
+                    "publication": "Medium (personal)",
+                    "publication_url": "https://medium.com/@thejoycekung",
                     "is_forthcoming": false
                 },
                 {
-                    "name": "'Chat Tics': The Good, the Bad, the Ugly, and the 'Same'!",
-                    "genre": "creative non-fiction",
-                    "url": "https://medium.com/yuniversity-interns/chat-tics-the-good-the-bad-the-ugly-and-the-same-134aeadeb690",
+                    "name": "Writer's Block",
+                    "year": 2015,
+                    "url": "https://medium.com/yuniversity-interns/writer-s-block-b81e25bfbb57",
                     "publication": "YUNiversity Interns",
                     "publication_url": "https://medium.com/yuniversity-interns/",
                     "is_forthcoming": false

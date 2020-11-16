@@ -2,10 +2,10 @@
     {{ .Content }}
 
     {{ range .Site.Data.projects.list }}
-        <h2>{{ .year }}</h2>
+        <h2>{{ .genre }}</h2>
         <ul class="project-list">
-            {{ range sort .pubs "name" "asc" }}
-                {{ partial "poem.html" . }}
+            {{ range sort .pubs "year" "desc" }}
+                {{ partial "pub.html" . }}
             {{ end }}
         </ul>
     {{ end }}
