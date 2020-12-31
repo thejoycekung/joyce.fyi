@@ -187,6 +187,6 @@ Books that I generally enjoyed have an asterisk next to them.
 
 # To 2021
 
-To be honest, my 2021 book goals are incredibly nebulous at the moment. Can I stop reading white men? I would love to read more Indigenous authors. More diasporic Chinese authors. More poetry - more of my friends' poetry. Dare I say it - more non-fiction? (I read 2 good non-fiction books and I think I'm prepared to read more, hah.)
+To be honest, my 2021 book goals are incredibly nebulous at the moment. Can I stop reading white men? I would love to read more Indigenous authors. More diasporic Asian authors. More poetry - more of my friends' poetry. Dare I say it - more non-fiction? (I read 2 good non-fiction books and I think I'm prepared to read more, hah.)
 
 A part of me wants to return to my old ways of annotating books as I read (borrowed, DRM e-books make this hard), but I am reluctant to *own* books until I have a space where I feel is home. (The physicality of book ownership feels like a large responsibility.)
