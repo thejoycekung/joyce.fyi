@@ -24,9 +24,7 @@ Previously read books did *not* count.[^prev] Plays, essay collections, full-len
 
 I originally used the [Toronto Public Library's 2020 reading challenge](https://www.torontopubliclibrary.ca/content/reading-challenge/pdfs/reading-challenge-2020.pdf) as a guide for selection since they had interesting categories, but this quickly devolved - the challenge (and its extended version) really only accommodated ~24 books. Which was not even half of my goal.
 
-At the beginning of the year, I was mostly putting holds on books and waiting for them to be physically available for pickup. Thankfully I started transitioning away from that in February, and I mostly used the Libby app (available on Android and Windows 10, aka both my devices) for the rest of the year.
-
-Using the Libby app meant I had a lot more access to what *everyone else* was reading, *and* I could check which titles were actually available.
+At some point in the year (ahem), I started using the Libby app, which allowed me to not only borrow e-books from my public library, but also see what was "popular" and what was available to borrow *now*.
 
 So my selection was pretty much, "what's popular and sounds interesting?".
 
