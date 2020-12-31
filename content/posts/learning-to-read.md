@@ -1,6 +1,7 @@
 +++
 title = "On Learning to Read (Literary Writing)"
 date = 2020-11-06T15:02:54-05:00
+categories = ["reading"]
 +++
 
 I'm a few days into my first gig as a reader in the Stone of Madness masthead, and I feel I need to learn how to read literary writing better.
