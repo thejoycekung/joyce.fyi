@@ -52,6 +52,7 @@ weight = 4
     postsOnHomePage = 4
     tagsOverview = false
     projectsUrl = "writings"
+    images = ['/img/twitter_card.png']
 
     [[params.social]]
     name = "twitter"
