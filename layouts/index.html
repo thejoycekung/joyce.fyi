@@ -27,7 +27,7 @@
 
     <section id="writing">
         <!-- TODO: use built in mainSections parameter https://gohugo.io/functions/where/#mainsections -->
-        <span class="h1"><a href="{{ .Site.Params.mainSection | absURL }}">Technical Writings</a></span>
+        <span class="h1"><a href="{{ .Site.Params.mainSection | absURL }}">Recent Posts</a></span>
         {{ $showAllPostsOnHomePage := false }}
         {{ if isset .Site.Params "showallpostsonhomepage" }}
             {{ $showAllPostsOnHomePage = .Site.Params.ShowAllPostsOnHomePage }}
