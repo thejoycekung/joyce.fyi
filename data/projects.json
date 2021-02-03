@@ -16,11 +16,12 @@
                 {
                     "name": "a list of tiny intimacies my mind absolutely relishes now, in no particular order",
                     "year": 2021,
+                    "url": "https://www.burningjademagazine.org/joyce-kung-3",
                     "publication": "Burning Jade Magazine",
                     "publication_url": "https://www.burningjademagazine.org",
                     "issue_num": 3,
                     "issue_name": "#cuffingszn",
-                    "is_forthcoming": true
+                    "is_forthcoming": false
                 },
                 {
                     "name": "just peachy",
@@ -40,25 +41,16 @@
                     "publication_url": "https://finishedcreatures.co.uk/",
                     "issue_num": 4,
                     "issue_name": "Stranger",
-                    "is_forthcoming": true
+                    "is_forthcoming": false
                 },
                 {
-                    "name": "my love language is pouring you tea -",
+                    "name": "my love language is pouring you tea—",
                     "year": 2021,
+                    "url": "https://www.burningjademagazine.org/joyce-kung-3",
                     "publication": "Burning Jade Magazine",
                     "publication_url": "https://www.burningjademagazine.org",
                     "issue_num": 3,
                     "issue_name": "#cuffingszn",
-                    "is_forthcoming": true
-                },
-                {
-                    "name": "restless",
-                    "year": 2020,
-                    "url": "https://formidablewoman.org/issue-no-1-vol-2-spring-2020",
-                    "publication": "fws: a journal of literature and art",
-                    "publication_url": "https://formidablewoman.org/",
-                    "issue_num": 1,
-                    "issue_name": "Vol 2 - Renga",
                     "is_forthcoming": false
                 },
                 {
@@ -75,7 +67,7 @@
             ]
         },
         {
-            "genre": "creative non-fiction",
+            "genre": "prose",
             "pubs": [
                 {
                     "name": "'Chat Tics': The Good, the Bad, the Ugly, and the 'Same'!",
