@@ -10,8 +10,7 @@
                     "publication": "the minison zine",
                     "publication_url": "https://theminisonproject.wordpress.com",
                     "issue_num": 3,
-                    "is_forthcoming": false,
-                    "is_feature": true
+                    "is_forthcoming": false
                 },
                 {
                     "name": "a list of tiny intimacies my mind absolutely relishes now, in no particular order",
@@ -51,6 +50,15 @@
                     "publication_url": "https://www.burningjademagazine.org",
                     "issue_num": 3,
                     "issue_name": "#cuffingszn",
+                    "is_forthcoming": false,
+                    "is_feature": true
+                },
+                {
+                    "name": "sorry, i can't reply to your message right now:",
+                    "year": 2021,
+                    "url": "https://dailydrunkmag.com/2021/03/02/sorry-i-cant-reply-to-your-message-right-now/",
+                    "publication": "The Daily Drunk",
+                    "publication_url": "https://dailydrunkmag.com",
                     "is_forthcoming": false
                 },
                 {
@@ -80,9 +88,9 @@
                 {
                     "name": "Furball",
                     "year": 2020,
-                    "url": "https://thedailydrunk.com/f/furball",
+                    "url": "https://dailydrunkmag.com/2020/12/11/furball/",
                     "publication": "The Daily Drunk",
-                    "publication_url": "https://thedailydrunk.com",
+                    "publication_url": "https://dailydrunkmag.com",
                     "is_forthcoming": false,
                     "is_feature": true
                 },
