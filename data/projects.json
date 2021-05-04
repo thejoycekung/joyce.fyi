@@ -78,6 +78,13 @@
             "genre": "prose",
             "pubs": [
                 {
+                    "name": "TONIGHT'S MENU",
+                    "year": 2021,
+                    "publication": "The Hungry Ghost Project",
+                    "publication_url": "https://hungryghostproject.com",
+                    "is_forthcoming": true
+                },
+                {
                     "name": "'Chat Tics': The Good, the Bad, the Ugly, and the 'Same'!",
                     "year": 2015,
                     "url": "https://medium.com/yuniversity-interns/chat-tics-the-good-the-bad-the-ugly-and-the-same-134aeadeb690",
