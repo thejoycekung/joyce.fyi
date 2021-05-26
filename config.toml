@@ -47,7 +47,7 @@ weight = 4
     rss = true
 
     # Main page settings
-    description = "I’m currently finishing my final year of Computer Science at the University of Waterloo, with a minor in English Language and Literature. I believe in good writing (docs, code, and words), empathy in tech, and the power of kind mentorship."
+    description = "I’m a recent graduate from the University of Waterloo, studying Computer Science with a minor in English Language and Literature. I believe in good writing (docs, code, and words), empathy in tech, and the power of kind mentorship."
     mainSection = "posts"
     postsOnHomePage = 4
     tagsOverview = false
