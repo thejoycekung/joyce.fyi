@@ -11,19 +11,14 @@ url = "/"
 weight = 1
 
 [[menu.main]]
-name = "Experience"
-url = "/experience"
+name = "Posts"
+url = "/posts"
 weight = 2
 
 [[menu.main]]
-name = "Posts"
-url = "/posts"
-weight = 3
-
-[[menu.main]]
-name = "Publications"
+name = "Literary Publications"
 url = "/writings"
-weight = 4
+weight = 3
 
 [markup]
   [markup.tableOfContents]
@@ -47,7 +42,7 @@ weight = 4
     rss = true
 
     # Main page settings
-    description = "I’m a recent graduate from the University of Waterloo, studying Computer Science with a minor in English Language and Literature. I believe in good writing (docs, code, and words), empathy in tech, and the power of kind mentorship."
+    description = "I'm currently a <a href="https://polywork.com/joyce">site reliability engineer</a> in Tkarón:to (Toronto). I believe in good writing (docs, code, and words), empathy in tech, and the power of kind mentorship."
     mainSection = "posts"
     postsOnHomePage = 4
     tagsOverview = false
