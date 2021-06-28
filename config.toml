@@ -42,7 +42,7 @@ weight = 3
     rss = true
 
     # Main page settings
-    description = "I'm currently a <a href='https://polywork.com/joyce'>site reliability engineer</a> in Tkarón:to (Toronto). I believe in good writing (docs, code, and words), empathy in tech, and the power of kind mentorship."
+    description = "I'm currently a site reliability engineer in Tkarón:to (Toronto). I believe in good writing (docs, code, and words), empathy in tech, and the power of kind mentorship."
     mainSection = "posts"
     postsOnHomePage = 4
     tagsOverview = false
